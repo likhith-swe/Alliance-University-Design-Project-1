@@ -7,6 +7,9 @@
 **Faculty Mentor:** Dr. Ganga Holi  
 **Live Production URL:** https://smart-campus-digital-twin-eight.vercel.app  
 **GitHub Repository:** https://github.com/likhith-swe/Alliance-University-Design-Project-1  
+**GitHub Release v1.0.0 (ZIP):** https://github.com/likhith-swe/Alliance-University-Design-Project-1/releases/tag/v1.0.0  
+**Google Drive Master Folder:** https://drive.google.com/open?id=1RNZK3fvyZiyCHCl05WUUlHI2I_noIK2G  
+**Google Drive ZIP Deliverable:** https://drive.google.com/open?id=1_ErIJ7VzJ-nHsCOhf2sranHYI48jlK1q  
 
 ---
 
