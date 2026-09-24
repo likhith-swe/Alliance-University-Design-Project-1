@@ -59,6 +59,8 @@ Design_Project_I/
 ├── 05 Project Outcomes and Performance Benchmarks.pdf
 ├── 06 Process Manual Compliance Summary.pdf
 ├── Review 1 Technical Defense Guide.pdf
+├── Review 1 Preparation and Defense Presentation.pptx
+├── Review 1 Preparation and Defense Presentation.pdf
 ├── Design Project Guidelines and Evaluation Rubrics v2.4.pdf
 ├── Process Manual on Design Project Dr M Selvam.pdf
 ├── README.md
