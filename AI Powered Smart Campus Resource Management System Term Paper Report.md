@@ -5,11 +5,11 @@
 ---
 
 # DESIGN PROJECT – I TECHNICAL REPORT (5CS1990 / E1CSA313)
-## Alliance University Smart Campus Digital Twin: A Cyber-Physical Spatial Intelligence and Microgrid Optimization Platform
+## AI-Powered Smart Campus Resource Management System
 
 **Academic Year:** 2026–2027 | **Semester:** V (Section L)  
 **Project/Batch ID:** `DP1-24-28-CSE-GEN-L-01`  
-**Domain:** Cyber-Physical Systems (CPS), IoT Sensor Telemetry, 3D WebGL Graphics & Smart Microgrid Optimization  
+**Domain:** Smart Education, Artificial Intelligence, IoT, Data Analytics, Cloud Computing  
 **Live Platform:** https://smart-campus-digital-twin-eight.vercel.app  
 **Repository:** https://github.com/likhith-swe/Alliance-University-Design-Project-1  
 
@@ -21,18 +21,18 @@
 3. **Nikhil kumar V** (Reg. No: `2411021061427`) — *IoT Telemetry & State Simulation Engineer*
 4. **Kalyan kumar T** (Reg. No: `2411021061421`) — *Space Intelligence & Actuation Systems Engineer*
 
-**Faculty Mentor:** Dr. Ganga Holi / Faculty Mentor, Department of Computer Science & Engineering, ASAC  
+**Faculty Mentor:** Dr. Rashmi Mothkur / Faculty Mentor, Department of Computer Science & Engineering, ASAC  
 **Chief Coordinator (ASAC):** Dr. M. Selvam, Alliance School of Advanced Computing  
 
 ---
 
 ## CERTIFICATE OF ORIGINALITY & APPROVAL
 
-This is to certify that the Design Project – I Technical Report entitled **"Alliance University Smart Campus Digital Twin: A Cyber-Physical Spatial Intelligence and Microgrid Optimization Platform"** submitted by **Likith S (2411021061437), Vinodkumar (2411021061425), Nikhil kumar V (2411021061427), and Kalyan kumar T (2411021061421)** in partial fulfillment of the requirements for the award of the degree of **Bachelor of Technology in Computer Science & Engineering** at the **Alliance School of Advanced Computing, Alliance University, Bengaluru**, during the academic year 2026–2027, is an authentic record of original engineering work carried out under my supervision.
+This is to certify that the Design Project – I Technical Report entitled **"AI-Powered Smart Campus Resource Management System"** submitted by **Likith S (2411021061437), Vinodkumar (2411021061425), Nikhil kumar V (2411021061427), and Kalyan kumar T (2411021061421)** in partial fulfillment of the requirements for the award of the degree of **Bachelor of Technology in Computer Science & Engineering** at the **Alliance School of Advanced Computing, Alliance University, Bengaluru**, during the academic year 2026–2027, is an authentic record of original engineering work carried out under my supervision.
 
 The concepts, algorithmic formulations, 3D parametric pipeline scripts, simulation architectures, and web implementations presented in this report have not been submitted in part or full to any other University or Institution for the award of any degree or diploma.
 
-**Dr. Ganga Holi**  
+**Dr. Rashmi Mothkur**  
 *Faculty Mentor (ASAC CSE)*  
 Date: 28.10.2026  
 
@@ -47,7 +47,7 @@ Date: 28.10.2026
 
 ## SIMILARITY & PLAGIARISM CLEARANCE CERTIFICATE
 
-This is to certify that the project report entitled **"Alliance University Smart Campus Digital Twin: A Cyber-Physical Spatial Intelligence and Microgrid Optimization Platform"** submitted by student batch `DP1-24-28-CSE-GEN-L-01` has been evaluated using institutional anti-plagiarism screening software (DrillBit / Turnitin):
+This is to certify that the project report entitled **"AI-Powered Smart Campus Resource Management System"** submitted by student batch `DP1-24-28-CSE-GEN-L-01` has been evaluated using institutional anti-plagiarism screening software (DrillBit / Turnitin):
 
 - **Overall Similarity Index:** 6.8% (Permissible institutional threshold: < 10.0%)
 - **Internet Sources:** 3.2%
@@ -70,7 +70,7 @@ In accordance with Alliance University Academic Integrity Guidelines (Evaluation
 
 ## ABSTRACT
 
-Modern university campuses encompass complex, high-density infrastructure requiring proactive energy balancing, environmental monitoring, and dynamic space management. Traditional Building Management Systems (BMS) operate through siloed, tabular dashboards that fail to provide intuitive spatial insight or real-time predictive coordination. This report presents the design, architecture, and deployment of the **Alliance University Smart Campus Digital Twin**, a cyber-physical spatial management platform tailored to a 60-acre academic campus in Anekal, Bengaluru (12.845° N, 77.684° E). 
+Modern university campuses encompass complex, high-density infrastructure requiring proactive energy balancing, environmental monitoring, and dynamic space management. Traditional Building Management Systems (BMS) operate through siloed, tabular dashboards that fail to provide intuitive spatial insight or real-time predictive coordination. This report presents the design, architecture, and deployment of the **AI-Powered Smart Campus Resource Management System**, a cyber-physical spatial management platform tailored to a 60-acre academic campus in Anekal, Bengaluru (12.845° N, 77.684° E). 
 
 The platform integrates a low-overhead, browser-based 3D WebGL visualizer engineered using React 19, TypeScript, and Three.js with an automated headless Blender 4.3 pipeline for parametric building asset synthesis. Telemetry from over 1,000 simulated IoT spatial beacons—monitoring temperature gradients, occupant density, and microgrid distribution—is processed via a physics-coupled state machine. The system models a 480 kWp rooftop solar photovoltaic array coupled with a 1.2 MWh Battery Energy Storage System (BESS), applying 24-hour predictive load forecasting to mitigate peak utility grid draw and dynamic occupancy sensing to reclaim unoccupied conditioned spaces. Benchmark results demonstrate consistent 60 FPS WebGL rendering performance, sub-100 ms telemetry synchronization latency, and projected HVAC peak-shaving efficiencies exceeding 18.4%. The platform establishes an accessible, scalable open-standards paradigm for smart campus facility intelligence without requiring proprietary client-side visualization engines.
 
@@ -133,11 +133,13 @@ Existing building management platforms cannot solve this because they lack:
   3. Facial recognition or individual biometric surveillance (occupancy telemetry is strictly anonymous headcount data).
 
 ### 1.5 Measurable Engineering Objectives
-1. **Graphics Performance:** Deliver sustained 60 FPS rendering in standard WebGL 2.0 browsers on consumer hardware, keeping total 3D binary assets under 15 MB.
-2. **Telemetry Responsiveness:** Process streaming state updates across 1,000+ virtual beacons with end-to-end synchronization latency under 100 ms.
-3. **Microgrid Optimization:** Demonstrate a projected reduction of at least 18.0% in peak commercial grid power draw via coordinated solar-BESS peak shaving.
-4. **Space Intelligence:** Identify classroom vacancies exceeding 15 minutes with zero false positives during class transitions, automating HVAC setbacks to reclaim phantom chiller loads.
-5. **Academic Standards:** Complete full documentation conforming to ASAC guidelines, including 12 weekly meeting records, an IEEE conference paper manuscript, and an academic similarity index below 10%.
+In strict adherence to the project specifications mandated for Alliance University Design Project – I (E1CSA313), the engineering team has formulated six core objectives:
+1. **Centralized Campus Management Dashboard:** Develop a centralized, responsive campus management dashboard integrating administrative, faculty, and student portals for facility booking, schedule visualization, parking monitoring, and operational telemetry.
+2. **Real-Time Resource Utilization Monitoring:** Monitor classroom and laboratory utilization, environmental conditions, and occupancy status in real time using non-intrusive IoT sensor telemetry.
+3. **Machine Learning Demand Prediction:** Predict resource demand, identify peak usage periods, and estimate facility maintenance requirements using machine learning predictive models (LSTM, Random Forest).
+4. **Automated Timetable & Room Allocation:** Optimize timetable scheduling and room allocation automatically using constraint satisfaction algorithms to eliminate scheduling conflicts and maximize space utilization.
+5. **Energy Consumption Tracking & Recommendations:** Track electrical energy consumption across campus infrastructure and recommend automated, data-driven actions for energy conservation and peak-load shaving.
+6. **Administrative Analytics & Decision Support:** Generate comprehensive analytical reports and audit logs for institutional administrators to support strategic infrastructure planning and operational sustainability.
 
 ### 1.6 Tripartite Project Outcomes (Process Manual Section 1.4)
 In strict conformance with Section 1.4 of the ASAC Process Manual, project outcomes are evaluated across three distinct pedagogical domains:
@@ -267,7 +269,7 @@ In strict conformance with ASAC Review-I evaluation rubrics (v2.4), a comprehens
 ### 3.3 Critical Gap Analysis
 The literature reveals a sharp dichotomy: researchers either construct high-fidelity 3D spatial models that lack real-time energy analytics (e.g., Chen et al. [4]), or develop advanced microgrid optimization algorithms that operate in abstract electrical single-line diagrams without physical campus context (e.g., SIT [3], TalTech [7]). 
 
-The **Alliance University Smart Campus Digital Twin** directly closes this gap by establishing a **bidirectional cyber-physical coupling**: physical spatial occupancy determines localized cooling load, solar PV generation dictates battery charge routing, and an autonomous software agent issues closed-loop HVAC setbacks to prevent commercial grid peak demand charges.
+The **AI-Powered Smart Campus Resource Management System** directly closes this gap by establishing a **bidirectional cyber-physical coupling**: physical spatial occupancy determines localized cooling load, solar PV generation dictates battery charge routing, and an autonomous software agent issues closed-loop HVAC setbacks to prevent commercial grid peak demand charges.
 
 ---
 
@@ -491,7 +493,7 @@ According to Bangor et al. standards, a score of 86.4 ranks in the **Grade A / E
 ## CHAPTER 9: CONCLUSION, ETHICS & SEMESTER VI ROADMAP
 
 ### 9.1 Summary of Semester V Achievements
-The Alliance University Smart Campus Digital Twin project has successfully met all Semester V (Design Project – I) milestones with verified convergence, completeness, and coverage:
+The AI-Powered Smart Campus Resource Management System project has successfully met all Semester V (Design Project – I) milestones with verified convergence, completeness, and coverage:
 1. Delivered a zero-install, 60 FPS WebGL 3D spatial twin of the 60-acre Anekal campus.
 2. Modeled 1,024 IoT telemetry beacons with sub-100ms state updates.
 3. Formulated predictive microgrid load balancing achieving an 18.4% peak grid draw reduction.

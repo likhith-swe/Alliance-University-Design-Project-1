@@ -1,14 +1,14 @@
-# Alliance University Smart Campus Digital Twin: A Cyber-Physical Spatial Intelligence and Microgrid Optimization Platform
+# AI-Powered Smart Campus Resource Management System
 
-**Likith S**, **Vinodkumar**, **Nikhil kumar V**, **Kalyan kumar T**, and **Dr. Ganga Holi**  
+**Likith S**, **Vinodkumar**, **Nikhil kumar V**, **Kalyan kumar T**, and **Dr. Rashmi Mothkur**  
 *Department of Computer Science & Engineering, Alliance School of Advanced Computing (ASAC)*  
 *Alliance University, Bengaluru, Karnataka, India*  
-*{slikith660, vinodkumar, nikhilkumar, kalyankumar}@alliance.edu.in, ganga.holi@alliance.edu.in*
+*{slikith660, vinodkumar, nikhilkumar, kalyankumar}@alliance.edu.in, rashmi.mothkur@alliance.edu.in*
 
 ---
 
 ### Abstract
-Modern university campuses encompass high-density built environments requiring dynamic energy dispatch, spatial thermal auditing, and proactive facility management. Conventional Building Management Systems (BMS) operate via fragmented, tabular dashboards that fail to correlate occupant density with localized electrical demand. This paper presents the architecture, mathematical modeling, and production deployment of the **Alliance University Smart Campus Digital Twin**, engineered for a 60-acre higher-education campus in Bengaluru, India (12.845° N, 77.684° E). The platform introduces a zero-install WebGL visualizer built on React 19, TypeScript, and Three.js, powered by an automated headless Blender 4.3 Python pipeline for parametric building synthesis. Streaming state updates across 1,024 simulated IoT sensor nodes are coupled to a 480 kWp rooftop solar photovoltaic array and a 1.2 MWh Battery Energy Storage System (BESS). An autonomous space intelligence agent identifies classroom ghost bookings exceeding 15 minutes, triggering automated chiller setbacks. Empirical benchmarks demonstrate sustained 60 FPS graphics performance on consumer hardware, 78 ms end-to-end telemetry ingestion latency, and an 18.4% reduction in peak commercial grid power draw under realistic tropical solar conditions.
+Modern university campuses encompass high-density built environments requiring dynamic energy dispatch, spatial thermal auditing, and proactive facility management. Conventional Building Management Systems (BMS) operate via fragmented, tabular dashboards that fail to correlate occupant density with localized electrical demand. This paper presents the architecture, mathematical modeling, and production deployment of the **AI-Powered Smart Campus Resource Management System**, engineered for a 60-acre higher-education campus in Bengaluru, India (12.845° N, 77.684° E). The platform introduces a zero-install WebGL visualizer built on React 19, TypeScript, and Three.js, powered by an automated headless Blender 4.3 Python pipeline for parametric building synthesis. Streaming state updates across 1,024 simulated IoT sensor nodes are coupled to a 480 kWp rooftop solar photovoltaic array and a 1.2 MWh Battery Energy Storage System (BESS). An autonomous space intelligence agent identifies classroom ghost bookings exceeding 15 minutes, triggering automated chiller setbacks. Empirical benchmarks demonstrate sustained 60 FPS graphics performance on consumer hardware, 78 ms end-to-end telemetry ingestion latency, and an 18.4% reduction in peak commercial grid power draw under realistic tropical solar conditions.
 
 **Keywords:** Smart Campus, Digital Twin, Cyber-Physical Systems, WebGL, Three.js, Microgrid Optimization, Peak Shaving, IoT Telemetry, Space Intelligence.
 
@@ -51,7 +51,9 @@ The architecture comprises five decoupled tiers:
 
 #### A. Solar PV Generation Model
 Solar generation is modeled as a truncated half-wave sinusoidal function calibrated to Bengaluru's geographical coordinates (12.845° N, 77.684° E):
-$$P_{	ext{solar}}(t) = \max\left(0, P_{	ext{peak}} \cdot \sin\left(rac{(t - 6) \cdot \pi}{12}ight)ight)$$
+$$P_{	ext{solar}}(t) = \max\left(0, P_{	ext{peak}} \cdot \sin\left(rac{(t - 6) \cdot \pi}{12}
+ight)
+ight)$$
 where $P_{	ext{peak}} = 480	ext{ kWp}$ and $t \in [6, 18]$ denotes local solar hours.
 
 #### B. Building Thermal Mass Dynamics
@@ -61,7 +63,8 @@ with $lpha = 0.05	ext{ hr}^{-1}$, $eta = 0.08^\circ	ext{C}/(	ext{person}\cdot	
 
 #### C. BESS Battery Dispatch
 The 1.2 MWh LFP battery bank operates under automated peak-shaving dispatch:
-$$	ext{SOC}(t + \Delta t) = 	ext{SOC}(t) + rac{\Delta t}{C_{	ext{rated}}} \left( P_{	ext{charge}}(t) \cdot \eta_{	ext{in}} - rac{P_{	ext{discharge}}(t)}{\eta_{	ext{out}}} ight)$$
+$$	ext{SOC}(t + \Delta t) = 	ext{SOC}(t) + rac{\Delta t}{C_{	ext{rated}}} \left( P_{	ext{charge}}(t) \cdot \eta_{	ext{in}} - rac{P_{	ext{discharge}}(t)}{\eta_{	ext{out}}} 
+ight)$$
 where $C_{	ext{rated}} = 1,200	ext{ kWh}$ and $\eta_{	ext{roundtrip}} = 92.16\%$. BESS discharges up to 250 kW when commercial grid demand threatens contracted thresholds during instructional hours.
 
 #### D. Ghost-Booking Reclamation Heuristic
@@ -88,7 +91,7 @@ A formal usability evaluation was administered to 12 campus stakeholders using t
 ---
 
 ### VII. CONCLUSION & FUTURE WORK
-The Alliance University Smart Campus Digital Twin provides a scalable, zero-install cyber-physical operating platform for higher-education campuses. By unifying 3D spatial WebGL rendering, physics-coupled IoT state machines, predictive microgrid balancing, and automated space reclamation, the system reduces commercial peak demand by 18.4% and eliminates phantom chiller loads. 
+The AI-Powered Smart Campus Resource Management System provides a scalable, zero-install cyber-physical operating platform for higher-education campuses. By unifying 3D spatial WebGL rendering, physics-coupled IoT state machines, predictive microgrid balancing, and automated space reclamation, the system reduces commercial peak demand by 18.4% and eliminates phantom chiller loads. 
 
 In Semester VI (6CS1991), the team will deploy 50 physical ESP32 LoRaWAN environmental nodes across the ACED building, implement Long Short-Term Memory (LSTM) neural networks for 48-hour load forecasting, and integrate live room booking APIs from the Alliance University ERP system.
 

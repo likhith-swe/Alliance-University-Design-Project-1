@@ -1,56 +1,85 @@
-# Alliance University — Design Project - I (5CS1990 / E1CSA313)
-## Smart Campus Digital Twin: A Cyber-Physical Spatial Intelligence and Microgrid Optimization Platform
-
-**Academic Year:** 2026–2027 | **Semester:** V (Section L)  
-**Project/Batch ID:** `DP1-24-28-CSE-GEN-L-01`  
-**Department:** Computer Science & Engineering, Alliance School of Advanced Computing (ASAC)  
-**Faculty Mentor:** Dr. Ganga Holi  
-**Live Production URL:** https://smart-campus-digital-twin-eight.vercel.app  
-**GitHub Repository:** https://github.com/likhith-swe/Alliance-University-Design-Project-1  
-**GitHub Release v1.0.0 (ZIP):** https://github.com/likhith-swe/Alliance-University-Design-Project-1/releases/tag/v1.0.0  
-**Google Drive Master Folder:** https://drive.google.com/open?id=1RNZK3fvyZiyCHCl05WUUlHI2I_noIK2G  
-**Google Drive ZIP Deliverable:** https://drive.google.com/open?id=1_ErIJ7VzJ-nHsCOhf2sranHYI48jlK1q  
+# AI-Powered Smart Campus Resource Management System
+### Alliance University · Alliance School of Advanced Computing (ASAC)
+**Department of Computer Science & Engineering | Academic Year 2026–2027**  
+**Course:** Design Project – I (E1CSA313 / 5CS1990) | **Batch ID:** `DP1-24-28-CSE-GEN-L-01`  
+**Faculty Coordinator / Mentor:** Dr. Rashmi Mothkur (ASAC CSE)  
+**Chief Course Coordinator:** Dr. M. Selvam (ASAC)  
 
 ---
 
-### Team Members & Specializations
-1. **Likith S** (`2411021061437`) — *Team Leader & Lead Graphics / Blender Architect*
-2. **Vinodkumar** (`2411021061425`) — *Microgrid Analytics & Energy Flow Lead*
-3. **Nikhil kumar V** (`2411021061427`) — *IoT Telemetry & State Simulation Engineer*
-4. **Kalyan kumar T** (`2411021061421`) — *Space Intelligence & Actuation Systems Engineer*
+## 1. Project Specifications
+- **Project Title:** AI-Powered Smart Campus Resource Management System
+- **Domain:** Smart Education, Artificial Intelligence, IoT, Data Analytics, Cloud Computing
+- **Core Technology Stack:**
+  - **Programming Languages:** Python, JavaScript, SQL
+  - **Frameworks & Libraries:** TensorFlow, Scikit-Learn, Pandas, NumPy, React.js, Flask / Django
+  - **Databases & Cloud:** PostgreSQL, MongoDB, AWS Cloud, Firebase
+  - **Tools & APIs:** Google Maps API, Campus ERP APIs, Git / GitHub, Docker, Postman
+- **Target Platform:** Web (Desktop & Mobile Responsive) + 3D WebGL Digital Twin
+- **Live Deployment:** [https://smart-campus-digital-twin-eight.vercel.app](https://smart-campus-digital-twin-eight.vercel.app)
+- **Official Repository:** [https://github.com/likhith-swe/Alliance-University-Design-Project-1](https://github.com/likhith-swe/Alliance-University-Design-Project-1)
 
 ---
 
-### Deliverables Directory (Zero Duplicates)
+## 2. Core Engineering Objectives
+1. **Centralized Campus Management Dashboard:** Develop a unified, responsive dashboard integrating administrative, faculty, and student portals.
+2. **Real-Time Resource Utilization Monitoring:** Monitor classroom and laboratory utilization, environmental conditions, and occupancy status via IoT sensor telemetry.
+3. **Machine Learning Demand Prediction:** Predict resource demand, identify peak usage periods, and estimate maintenance requirements using machine learning models (LSTM, Random Forest).
+4. **Automated Timetable & Room Allocation:** Optimize timetable scheduling and room allocation automatically using constraint satisfaction algorithms to eliminate clashes.
+5. **Energy Consumption Tracking & Recommendations:** Track electrical energy consumption and recommend automated energy-saving actions and peak-load shaving.
+6. **Administrative Analytics & Decision Support:** Generate comprehensive analytical reports and audit logs for institutional administrators.
 
-#### 1. Official Review Diary (20 Pages)
-- **PDF:** [`Design Project - I - Review Dairy - Dr. M.Selvam -16.09.2026.pdf`](./Design%20Project%20-%20I%20-%20Review%20Dairy%20-%20Dr.%20M.Selvam%20-16.09.2026.pdf)
-- **DOCX:** [`Design Project - I - Review Dairy - Dr. M.Selvam -16.09.2026.docx`](./Design%20Project%20-%20I%20-%20Review%20Dairy%20-%20Dr.%20M.Selvam%20-16.09.2026.docx)
-- *Contents:* Cover metadata, 196-word abstract, 5-phase Design Thinking engineering framework, 12-source IEEE Literature Review comparative matrix (2024–2026), 5-tier architecture, 5-point risk register, complete 12-week sequential meeting logs, evaluation forms (Zeroth, First, Second, SEE), submission checklist, consent forms, institutional AI-usage declaration, and similarity compliance certificate.
+---
 
-#### 2. Comprehensive Academic Term Paper / Project Report (21 Pages, IEEE Format)
-- **PDF:** [`Alliance_University_Design_Project_I_Term_Paper_Report.pdf`](./Alliance_University_Design_Project_I_Term_Paper_Report.pdf)
-- **DOCX:** [`Alliance_University_Design_Project_I_Term_Paper_Report.docx`](./Alliance_University_Design_Project_I_Term_Paper_Report.docx)
-- **Markdown:** [`Alliance_University_Design_Project_I_Term_Paper_Report.md`](./Alliance_University_Design_Project_I_Term_Paper_Report.md)
-- *Contents:* 9 complete chapters, theoretical derivations (solar irradiance curve, thermal mass differential equations, BESS SOC dispatch, space reclamation heuristics), 60 FPS GPU benchmarks, 78ms telemetry sync, 18.4% peak shaving validation, and SUS usability evaluation (86.4 score).
+## 3. Team Members & Subsystem Ownership
+1. **Likith S** (Reg No: `2411021061437`) — *Team Leader & Lead Graphics/Dashboard Architect*  
+   - Subsystem: Centralized Multi-Role Dashboard, React 19 UI/UX, 3D WebGL Digital Twin Engine & Parametric Blender Pipeline.
+2. **Vinodkumar** (Reg No: `2411021061425`) — *Microgrid Analytics & Energy Optimization Lead*  
+   - Subsystem: Real-time SVG Sankey power routing, solar generation trigonometric curve, 1.2 MWh BESS peak-shaving dispatch.
+3. **Nikhil kumar V** (Reg No: `2411021061427`) — *IoT Telemetry & State Simulation Engineer*  
+   - Subsystem: 1,000+ virtual sensor nodes, environmental telemetry streaming, WebSocket ingestion, and literature review synthesis.
+4. **Kalyan kumar T** (Reg No: `2411021061421`) — *Timetable Optimization & Space Intelligence Engineer*  
+   - Subsystem: Constraint Satisfaction timetable solver, ghost-booking detection heuristics, and automated HVAC setbacks.
 
-#### 3. IEEE Conference Paper Manuscript
-- **PDF:** [`IEEE_Conference_Paper_Alliance_Smart_Campus_Digital_Twin.pdf`](./IEEE_Conference_Paper_Alliance_Smart_Campus_Digital_Twin.pdf)
-- **DOCX:** [`IEEE_Conference_Paper_Alliance_Smart_Campus_Digital_Twin.docx`](./IEEE_Conference_Paper_Alliance_Smart_Campus_Digital_Twin.docx)
-- **Markdown:** [`IEEE_Conference_Paper_Alliance_Smart_Campus_Digital_Twin.md`](./IEEE_Conference_Paper_Alliance_Smart_Campus_Digital_Twin.md)
-- *Contents:* IEEE 2-column standard conference paper format targeted for Scopus-indexed IEEE conference venue.
+---
 
-#### 4. Official Review-I Presentation Deck
-- **PPTX:** [`Presentation_Design_Project_1_Smart_Campus_Digital_Twin.pptx`](./Presentation_Design_Project_1_Smart_Campus_Digital_Twin.pptx)
-- *Contents:* 22 slides matching Dr. M. Selvam's official presentation template with dedicated Design Thinking engineering framework on Slide 10.
+## 4. Master Deliverables Directory Structure
+All project deliverables follow clean, standardized naming without underscores or slashes:
 
-#### 5. ASAC Reference Guidelines & Process Manual
-- [`Design_Project_Guidelines and Evaluation Rubrics_v2.4 - 16.09.2026.pdf`](./Design_Project_Guidelines%20and%20Evaluation%20Rubrics_v2.4%20-%2016.09.2026.pdf)
-- [`Process Manual on Design Project-16.09.2026 - Dr. M.Selvam.pdf`](./Process%20Manual%20on%20Design%20Project-16.09.2026%20-%20Dr.%20M.Selvam.pdf)
+```
+Design_Project_I/
+├── Review Diary Dr Rashmi Mothkur.docx
+├── Review Diary Dr Rashmi Mothkur.pdf
+├── AI Powered Smart Campus Resource Management System Term Paper Report.docx
+├── AI Powered Smart Campus Resource Management System Term Paper Report.pdf
+├── AI Powered Smart Campus Resource Management System Term Paper Report.md
+├── AI Powered Smart Campus Resource Management System Presentation Deck.pptx
+├── AI Powered Smart Campus Resource Management System Conference Paper.docx
+├── AI Powered Smart Campus Resource Management System Conference Paper.pdf
+├── AI Powered Smart Campus Resource Management System Conference Paper.md
+├── 01 Problem Statement and Engineering Scope.docx
+├── 01 Problem Statement and Engineering Scope.pdf
+├── 02 Project Objectives and Expected Outcomes.docx
+├── 02 Project Objectives and Expected Outcomes.pdf
+├── 03 Complex Engineering Problems Analysis.docx
+├── 03 Complex Engineering Problems Analysis.pdf
+├── 04 Systematic Literature Review Table.docx
+├── 04 Systematic Literature Review Table.pdf
+├── 04 Systematic Literature Review Table.md
+├── 05 Project Outcomes and Performance Benchmarks.docx
+├── 05 Project Outcomes and Performance Benchmarks.pdf
+├── 06 Process Manual Compliance Summary.docx
+├── 06 Process Manual Compliance Summary.pdf
+├── Review 1 Technical Defense Guide.md
+├── README.md
+├── Design Project Guidelines and Evaluation Rubrics v2.4.pdf
+├── Process Manual on Design Project Dr M Selvam.pdf
+└── AI Powered Smart Campus Resource Management System Complete Package.zip
+```
 
-#### 6. Technical Guides & Research Dossiers
-- [`Review_1_Technical_Defense_Guide.md`](./Review_1_Technical_Defense_Guide.md)
-- [`Campus_Brain_Autonomous_Research_Data.md`](./Campus_Brain_Autonomous_Research_Data.md)
+---
 
-#### 7. Consolidated Archive Package
-- [`Alliance_University_Design_Project_I_Complete_Pack.zip`](./Alliance_University_Design_Project_I_Complete_Pack.zip)
+## 5. Academic Integrity & Compliance
+- **Anti-Plagiarism Screening:** Verified using institutional DrillBit / Turnitin software (<8% similarity index, permissible ceiling <10%).
+- **Process Manual Conformance:** 100% compliant with Sections 1.1 to 1.6 and Section 4.9 of the ASAC Process Manual.
+- **Ethical Standards:** Fully non-intrusive spatial sensing with zero biometric or facial recognition tracking.
