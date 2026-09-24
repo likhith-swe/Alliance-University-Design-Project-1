@@ -9,7 +9,7 @@
 
 ## 1. Project Specifications
 - **Project Title:** AI-Powered Smart Campus Resource Management System
-- **Domain:** Smart Education, Artificial Intelligence, IoT, Data Analytics, Cloud Computing
+- **Industry Domain:** Smart Education, Artificial Intelligence, IoT, Data Analytics, Cloud Computing
 - **Core Technology Stack:**
   - **Programming Languages:** Python, JavaScript, SQL
   - **Frameworks & Libraries:** TensorFlow, Scikit-Learn, Pandas, NumPy, React.js, Flask / Django
@@ -44,36 +44,24 @@
 ---
 
 ## 4. Master Deliverables Directory Structure
-All project deliverables follow clean, standardized naming without underscores or slashes:
+All project deliverables follow a unified single-format standard (PDF) without duplicates, underscores, or slashes:
 
 ```
 Design_Project_I/
-├── Review Diary Dr Rashmi Mothkur.docx
 ├── Review Diary Dr Rashmi Mothkur.pdf
-├── AI Powered Smart Campus Resource Management System Term Paper Report.docx
 ├── AI Powered Smart Campus Resource Management System Term Paper Report.pdf
-├── AI Powered Smart Campus Resource Management System Term Paper Report.md
-├── AI Powered Smart Campus Resource Management System Presentation Deck.pptx
-├── AI Powered Smart Campus Resource Management System Conference Paper.docx
+├── AI Powered Smart Campus Resource Management System Presentation Deck.pdf
 ├── AI Powered Smart Campus Resource Management System Conference Paper.pdf
-├── AI Powered Smart Campus Resource Management System Conference Paper.md
-├── 01 Problem Statement and Engineering Scope.docx
 ├── 01 Problem Statement and Engineering Scope.pdf
-├── 02 Project Objectives and Expected Outcomes.docx
 ├── 02 Project Objectives and Expected Outcomes.pdf
-├── 03 Complex Engineering Problems Analysis.docx
 ├── 03 Complex Engineering Problems Analysis.pdf
-├── 04 Systematic Literature Review Table.docx
 ├── 04 Systematic Literature Review Table.pdf
-├── 04 Systematic Literature Review Table.md
-├── 05 Project Outcomes and Performance Benchmarks.docx
 ├── 05 Project Outcomes and Performance Benchmarks.pdf
-├── 06 Process Manual Compliance Summary.docx
 ├── 06 Process Manual Compliance Summary.pdf
-├── Review 1 Technical Defense Guide.md
-├── README.md
+├── Review 1 Technical Defense Guide.pdf
 ├── Design Project Guidelines and Evaluation Rubrics v2.4.pdf
 ├── Process Manual on Design Project Dr M Selvam.pdf
+├── README.md
 └── AI Powered Smart Campus Resource Management System Complete Package.zip
 ```
 
