@@ -113,7 +113,8 @@ Managing a 60-acre higher-education ecosystem presents complex engineering trade
 
 ### 1.3 Problem Definition
 Formally, campus facility managers face a multi-variable optimization failure:
-$$\min \left( C_{	ext{grid}}(t) + C_{	ext{degradation}}(t) ight) \quad 	ext{subject to} \quad T_{	ext{internal}}(t) \le T_{	ext{setpoint}}, \quad 	ext{Latency} \le 100	ext{ ms}$$
+$$\min \left( C_{	ext{grid}}(t) + C_{	ext{degradation}}(t) 
+ight) \quad 	ext{subject to} \quad T_{	ext{internal}}(t) \le T_{	ext{setpoint}}, \quad 	ext{Latency} \le 100	ext{ ms}$$
 Existing building management platforms cannot solve this because they lack:
 1. Real-time 3D spatial grounding that correlates physical architecture with thermal and occupant telemetry;
 2. An automated microgrid dispatch model that coordinates renewable solar PV generation with battery storage;
@@ -137,6 +138,43 @@ Existing building management platforms cannot solve this because they lack:
 3. **Microgrid Optimization:** Demonstrate a projected reduction of at least 18.0% in peak commercial grid power draw via coordinated solar-BESS peak shaving.
 4. **Space Intelligence:** Identify classroom vacancies exceeding 15 minutes with zero false positives during class transitions, automating HVAC setbacks to reclaim phantom chiller loads.
 5. **Academic Standards:** Complete full documentation conforming to ASAC guidelines, including 12 weekly meeting records, an IEEE conference paper manuscript, and an academic similarity index below 10%.
+
+### 1.6 Tripartite Project Outcomes (Process Manual Section 1.4)
+In strict conformance with Section 1.4 of the ASAC Process Manual, project outcomes are evaluated across three distinct pedagogical domains:
+- **Cognitive Outcomes:**
+  1. *Problem Formulation:* Formulate a rigorous constrained multi-variable optimization model minimizing commercial grid energy import costs subject to thermal envelope and battery degradation kinetics.
+  2. *Alternative Evaluation:* Systematically evaluate alternative spatial visualization frameworks and telemetry protocols utilizing a 5-criterion Pugh decision matrix.
+  3. *Engineering Analysis:* Conduct mathematical derivation of trigonometric solar irradiance elevation, lumped-capacitance building thermal ODEs, and BESS electrochemical state-of-charge boundaries.
+  4. *Component Selection:* Justify selection of React 19, Three.js r170, Blender 4.3 LTS, and ESP32 edge telemetry nodes.
+- **Practical & Technical Outcomes:**
+  1. *Functional Prototype:* Build and deploy a production-grade 3D WebGL Digital Twin platform live on Vercel ().
+  2. *Engineering Software:* Develop headless procedural Blender Python scripts generating compact (<15 MB) glTF/GLB web assets.
+  3. *Empirical Testing:* Experimentally validate 60.0 FPS graphics throughput, 78.6 ms telemetry synchronization latency, and 18.4% grid peak demand reduction.
+- **Professional & Soft Outcomes:**
+  1. *Documentation & Defense:* Author a comprehensive 21-page academic term paper, 22-slide ASAC presentation deck, and Scopus-indexed IEEE manuscript.
+  2. *Teamwork & Collaboration:* Maintain 12 sequential weekly meeting logs with rigorous division of labor across 4 specialized subsystem leads.
+  3. *Resource & Milestone Management:* Deliver all Semester V milestones on schedule with zero financial overhead using open-source toolchains.
+  4. *Ethics & Privacy:* Eliminate individual biometric surveillance by enforcing strictly aggregated, anonymous headcount sensing.
+
+### 1.7 Complex Engineering Problems Analysis (Process Manual Section 1.5)
+Engineering design projects inherently address **Complex Engineering Problems** as defined by ABET Criterion 5 and NBA Program Outcomes (PO1–PO12). The table below maps each mandated attribute directly to the Alliance Smart Campus Digital Twin:
+
+| Complex Problem Attribute | Process Manual Theoretical Criteria | Concrete Implementation in Alliance Smart Campus Digital Twin |
+| :--- | :--- | :--- |
+| **Deep Technical Knowledge Required** | Cannot be solved by simple textbook formulas; requires synthesis of multiple engineering disciplines. | Synthesizes 3D computer graphics (WebGL shaders, GLTF vertex buffers), distributed IoT networks (WebSockets, Zustand store hydration), electrical power systems (microgrid power balance, BESS electrochemical SOC constraints), and building thermodynamics. |
+| **Open-Ended, Multiple Solutions** | No single correct answer; engineering trade-offs exist between cost, performance, safety, and aesthetics. | Navigated trade-offs between 3D polygonal fidelity (LOD) vs. client browser frame-rate (60 FPS), and aggressive peak-shaving dispatch vs. Lithium-Iron-Phosphate (LFP) cycle degradation life. |
+| **Involves Conflicting Constraints** | Lightweight vs. strong, low-cost vs. durable, fast vs. energy efficient. | High photorealistic spatial detail vs. strict web binary size (<15 MB); aggressive commercial peak shaving vs. maintaining academic thermal comfort (24.0 ± 1.0 °C); streaming 1,024 sensor feeds vs. client network bandwidth. |
+| **Not Fully Defined in Advance** | Requirements evolve as the team discovers technical or customer constraints. | Empirical field investigations revealed an unexpected 28.4% classroom ghost-booking rate and severe BESCOM maximum demand surcharges, expanding requirements to include automated space intelligence. |
+| **Requires Information Gathering** | Literature review, vendor data, international standards (IEEE, ISO), user feedback. | Systematic synthesis of 12 peer-reviewed IEEE/Elsevier research publications (2024–2026), BESCOM commercial tariff rate cards, Alliance University Anekal campus GIS shapefiles, and facility technician interviews. |
+| **Non-Standard Solution Path** | Cannot be solved by routine methods; requires creativity, iteration, and judgment. | Constructed a novel bidirectional cyber-physical coupling: spatial occupant density dynamically drives chiller setpoints and battery routing in a zero-install browser canvas. |
+| **Involves Real-World Constraints** | Budget limits, safety regulations, supply chain issues, environmental impact. | Zero-dollar commercial software budget (100% open-source stack); non-intrusive student privacy regulations (strictly anonymous headcount data, zero biometrics); adherence to Karnataka Grid Code standards. |
+| **Requires Teamwork & Coordination** | Different sub-systems must interface correctly; complex integration challenges arise. | Coordinated across 4 distinct modules: 3D Graphics Architecture (Likith S), Energy Analytics (Vinodkumar), IoT Telemetry (Nikhil kumar V), and Space Intelligence (Kalyan kumar T) via unified TypeScript contracts. |
+
+### 1.8 Curricular Requirements & Expected Academic Outcomes (Process Manual Section 1.6)
+As stipulated in Section 1.6 of the Process Manual, the Design Project is structured across two phases:
+- **Design Project – I (5CS1990 / E1CSA313) [Semester V]:** Focuses on need-finding, literature survey, mathematical modeling, 3D WebGL spatial architecture, and functional simulation prototype (Completed 100% with empirical benchmarks).
+- **Design Project – II (6CS1991 / E1CSA314) [Semester VI]:** Focuses on extended implementation, physical hardware deployment across campus buildings, and long-term multi-seasonal energy validation.
+- **Mandated Academic Outcomes:** (1) Working prototype deployed live, (2) Scopus-indexed IEEE Conference Paper manuscript, (3) Formal Review Diary with 12+ weekly meeting logs, and (4) Originality compliance (<8% similarity).
 
 ---
 
@@ -301,7 +339,8 @@ To avoid the prohibitive overhead of manual 3D modeling, the team developed an a
 Solar photovoltaic generation is modeled as a truncated half-wave sine function calibrated to the geographical coordinates of Anekal, Bengaluru (`12.845° N, 77.684° E`):
 
 $$P_{	ext{solar}}(t) = egin{cases} 
-P_{	ext{peak}} \cdot \sin\left( rac{(t - t_{	ext{rise}}) \cdot \pi}{t_{	ext{set}} - t_{	ext{rise}}} ight) \cdot \eta_{	ext{weather}} & 	ext{for } t_{	ext{rise}} \le t \le t_{	ext{set}} \
+P_{	ext{peak}} \cdot \sin\left( rac{(t - t_{	ext{rise}}) \cdot \pi}{t_{	ext{set}} - t_{	ext{rise}}} 
+ight) \cdot \eta_{	ext{weather}} & 	ext{for } t_{	ext{rise}} \le t \le t_{	ext{set}} \
 0 & 	ext{otherwise}
 \end{cases}$$
 
@@ -314,7 +353,8 @@ P_{	ext{peak}} \cdot \sin\left( rac{(t - t_{	ext{rise}}) \cdot \pi}{t_{	ext{set
 ### 5.2 Building Thermal Mass Dynamics
 Localized room temperatures evolve according to a first-order differential heat-balance equation:
 
-$$rac{d T_{	ext{internal}}(t)}{dt} = lpha \cdot \left( T_{	ext{ambient}}(t) - T_{	ext{internal}}(t) ight) + eta \cdot N_{	ext{occupants}}(t) - \gamma \cdot P_{	ext{HVAC}}(t)$$
+$$rac{d T_{	ext{internal}}(t)}{dt} = lpha \cdot \left( T_{	ext{ambient}}(t) - T_{	ext{internal}}(t) 
+ight) + eta \cdot N_{	ext{occupants}}(t) - \gamma \cdot P_{	ext{HVAC}}(t)$$
 
 - $lpha = 0.05	ext{ hr}^{-1}$: Thermal transmittance coefficient of the building envelope.
 - $eta = 0.08^\circ	ext{C} / (	ext{person} \cdot 	ext{hr})$: Sensible metabolic heat gain per occupant.
@@ -324,7 +364,8 @@ $$rac{d T_{	ext{internal}}(t)}{dt} = lpha \cdot \left( T_{	ext{ambient}}(t) - 
 ### 5.3 1.2 MWh Battery Energy Storage System (BESS) Dynamics
 The State of Charge (SOC) of the 1.2 MWh LFP battery bank evolves based on the net campus generation-consumption balance:
 
-$$	ext{SOC}(t + \Delta t) = 	ext{SOC}(t) + rac{\Delta t}{C_{	ext{rated}}} \cdot \left( P_{	ext{charge}}(t) \cdot \eta_{	ext{in}} - rac{P_{	ext{discharge}}(t)}{\eta_{	ext{out}}} ight)$$
+$$	ext{SOC}(t + \Delta t) = 	ext{SOC}(t) + rac{\Delta t}{C_{	ext{rated}}} \cdot \left( P_{	ext{charge}}(t) \cdot \eta_{	ext{in}} - rac{P_{	ext{discharge}}(t)}{\eta_{	ext{out}}} 
+ight)$$
 
 - $C_{	ext{rated}} = 1,200	ext{ kWh}$.
 - $\eta_{	ext{in}} = 0.96, \quad \eta_{	ext{out}} = 0.96 \implies \eta_{	ext{roundtrip}} = 92.16\%$.
@@ -429,7 +470,8 @@ During a simulated 24-hour cycle matching typical September solar irradiance in 
 
 ### 7.4 System Usability Scale (SUS) Evaluation
 A formal usability study was conducted with 12 campus participants (4 facility technicians, 4 CSE faculty, 4 students):
-$$	ext{SUS Score} = 2.5 \cdot \left[ \sum_{i \in 	ext{odd}} (s_i - 1) + \sum_{i \in 	ext{even}} (5 - s_i) ight] = \mathbf{86.4} / 100$$
+$$	ext{SUS Score} = 2.5 \cdot \left[ \sum_{i \in 	ext{odd}} (s_i - 1) + \sum_{i \in 	ext{even}} (5 - s_i) 
+ight] = \mathbf{86.4} / 100$$
 According to Bangor et al. standards, a score of 86.4 ranks in the **Grade A / Exemplary** percentile, demonstrating exceptional interface learnability and operational clarity.
 
 ---
