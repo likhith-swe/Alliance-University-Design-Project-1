@@ -58,6 +58,8 @@ Design_Project_I/
 ├── 04 Systematic Literature Review Table.pdf
 ├── 05 Project Outcomes and Performance Benchmarks.pdf
 ├── 06 Process Manual Compliance Summary.pdf
+├── Review 0 Presentation Script and Technical Defense Guide.pdf
+├── Review 0 Presentation Script and Technical Defense Guide.md
 ├── Review 1 Technical Defense Guide.pdf
 ├── Review 1 Preparation and Defense Presentation.pptx
 ├── Review 1 Preparation and Defense Presentation.pdf
@@ -66,6 +68,14 @@ Design_Project_I/
 ├── README.md
 └── AI Powered Smart Campus Resource Management System Complete Package.zip
 ```
+
+---
+
+## 5. Review-I / Review 0 Presentation & Defense Guide
+- **Direct GitHub Document:** [Review 0 Presentation Script and Technical Defense Guide.pdf](https://github.com/likhith-swe/Alliance-University-Design-Project-1/blob/main/Review%200%20Presentation%20Script%20and%20Technical%20Defense%20Guide.pdf)
+- **Markdown Edition:** [Review 0 Presentation Script and Technical Defense Guide.md](https://github.com/likhith-swe/Alliance-University-Design-Project-1/blob/main/Review%200%20Presentation%20Script%20and%20Technical%20Defense%20Guide.md)
+- **Master Google Drive Folder:** [Google Drive Shareable Folder](https://drive.google.com/open?id=1RNZK3fvyZiyCHCl05WUUlHI2I_noIK2G)
+
 
 ---
 
