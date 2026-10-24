@@ -1,0 +1,9 @@
+Room ID,Building,Room Type,Seating Capacity,Assigned Course,Scheduled Time,Measured Headcount,HVAC Status,Ghost Booking Detected (>15m)
+LT-201,Chintan Academic Block,Tiered Lecture Theatre,120,Discrete Mathematics (E1CSA 316),09:00 - 10:00,98,Active (23.5°C),No
+CR-104,Chintan Academic Block,Standard Classroom,60,Soft Skills - II (E1CSA 108),10:00 - 11:00,52,Active (24.0°C),No
+Lab-3,ACED Labs,Python Computing Lab,45,Advanced Python (E1CSA 348),11:15 - 13:00,42,Active (22.0°C),No
+LT-102,Chintan Academic Block,Tiered Lecture Theatre,90,Theory of Computation (E1CSA 400),13:45 - 14:45,84,Active (23.5°C),No
+CR-205,Chintan Academic Block,Standard Classroom,60,Empty Slot (Faculty Cancelled),14:45 - 15:45,0,Energy Save Mode (27.0°C),YES (Auto-Setback Dispatched)
+Lab-1,ACED Labs,Java Development Lab,45,Java Programming (E1CSA 396),14:45 - 16:30,40,Active (22.5°C),No
+LT-304,Chintan Academic Block,Tiered Lecture Theatre,120,Cryptography & NetSec (E1CSA 311),15:45 - 16:45,96,Active (23.5°C),No
+Seminar Hall,Administrative Block,Auditorium,200,Design Project-I Review,11:00 - 13:00,65,Active (22.0°C),No

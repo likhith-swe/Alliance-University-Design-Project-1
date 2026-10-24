@@ -1,0 +1,124 @@
+*DESIGN PROJECT 1 — MENTOR MEETING SCRIPT & ROLES*
+Course: Design Project – I (E1CSA313 / 5CS1990) | Section L
+Mentor: Dr. Rashmi Mothkur (Associate Professor, ASAC CSE)
+Team: Likhith S (Lead), Vinodkumar, Nikhil Kumar V, Kalyan Kumar T
+Project: AI-Powered Smart Campus Resource Management System
+Local Preview: 00_INTERACTIVE_PREVIEW_SMART_CAMPUS.html (In Desktop Folder)
+Live Web Build: https://smart-campus-dashboard-web.vercel.app
+
+
+========================================
+📂 FILES TO SHOW (IN DESKTOP FOLDER)
+========================================
+- 00_INTERACTIVE_PREVIEW_SMART_CAMPUS.html -> Interactive White Minimalist Console (AU ERP live sync, 3D WebGL Digital Twin, Facility Directory, Smart Attendance, Timetable, Library, Events, Microgrid Sankey)
+- 01_Review_Defense_Report.pdf -> Full evaluation topics report
+- 02_Review_2_Presentation.pdf -> 14-slide defense deck
+- Sheet 1 to 5 PDFs -> Architecture, DFDs, UML, Microgrid SLD, Campus Master Site Plan
+- 03_Review_Diary_Dr_Rashmi_Mothkur.pdf -> Logbook for signature
+- 04_IEEE_Conference_Paper.pdf -> IEEE conference draft paper
+- 05_Term_Paper_Report.pdf -> Technical term paper report
+
+
+========================================
+🎙️ WHO PRESENTS WHAT (TURN-BY-TURN SCRIPT)
+========================================
+
+--- PART 1: LIKHITH S (Opening, AU ERP Gateway, 3D Campus Digital Twin & Facility Directory — 1 Min) ---
+[Action: Laptop open on table with 00_INTERACTIVE_PREVIEW_SMART_CAMPUS.html loaded in Chrome. Likhith speaks.]
+
+"Good morning Ma'am. Thank you for taking the time to meet with our team today.
+In our previous Review discussion, you gave us two critical directives:
+1. To visually map power transfers across the 11 kV BESCOM grid, rooftop solar, and battery storage.
+2. To integrate actual academic timetable scheduling so resource adjustments account for lecture hours.
+
+We focused completely on closing these points. Our project has now passed the 55% implementation milestone for Review 2, running live in our clean glassmorphic console.
+
+[Showing Header & AU ERP Gateway Modal]
+Our system connects directly via the AU ERP Gateway using token credentials. It provides role-based access control for both Student and Faculty personas.
+
+[Switching to 3D Campus & Facilities tab]
+Here is our interactive 3D WebGL Digital Twin of the 60-acre Alliance University Anekal campus powered by Three.js, satisfying Objective 1 of our Project Diary. You can rotate, zoom, and inspect each building in real time at 60 FPS. 
+
+Right alongside is our searchable Facility Directory, providing live space occupancy, climate HVAC chiller draw, and room schedules when you inspect any block—such as Chintan Academic Block or the Central Library Rotunda.
+
+Now Vinod will explain our microgrid energy routing and dynamic Sankey visualization."
+
+
+--- PART 2: VINODKUMAR (Microgrid & Dynamic Sankey Energy Routing — 1 Min) ---
+[Action: Vinod steps up, clicks 'Microgrid Flow' tab, and explains the dynamic SVG Sankey diagram.]
+
+"Good morning Ma'am. To address your Review 1 feedback, we built this dynamic Sankey power visualizer.
+
+Instead of static tables, this diagram visualizes real-time power transfers across the entire campus:
+1. It maps baseline power from the 11 kV BESCOM utility grid (342 kW) and our 480 kWp rooftop solar PV installation (214 kW generated).
+2. During the afternoon peak-tariff window, the system automatically routes stored power from our 1.2 MWh battery energy storage system (BESS, discharging 48 kW) to meet the 604 kW total campus demand.
+3. This peak-shaving algorithm reduces institutional maximum demand charges by up to 18.4% without any physical grid disruptions.
+
+Now Nikhil will show how our software-first data ingestion and smart attendance tracking operate."
+
+
+--- PART 3: NIKHIL KUMAR V (AU ERP Data Sync & Smart Attendance Analytics — 1 Min) ---
+[Action: Nikhil clicks 'Smart Attendance' tab, highlights the AU ERP course records and tests the Bunk Simulator.]
+
+"Good morning Ma'am. I engineered the AU ERP data ingestion and attendance analytics engine.
+
+In accordance with Section 1.6 of the ASAC Process Manual, our implementation is strictly software-based without deploying any new physical hardware or sensors on campus:
+1. The engine ingests verified academic attendance records directly from the AU ERP portal across all 8 semester courses.
+2. We implemented the exact mathematical 75% attendance threshold formula:
+   Safe Bunks = floor((Present - 0.75 * Total) / 0.75)
+   Classes Needed to Recover = ceil(3 * Total - 4 * Present)
+3. Students and faculty can interactively simulate missed classes in real time to instantly see risk status (Safe, Warning, Critical) before debarment lists are published.
+
+Now Kalyan will explain our timetable constraint solver and ghost-booking detection."
+
+
+--- PART 4: KALYAN KUMAR T (Timetable Management & Space Hysteresis — 1 Min) ---
+[Action: Kalyan clicks 'Timetable' tab, pointing to the Monday–Saturday slot grid and room allocations.]
+
+"Good morning Ma'am. I developed the timetable constraint-satisfaction solver and space hysteresis logic.
+
+A major source of resource wastage across large university campuses is classrooms booked on the schedule but physically vacant:
+1. Our zero-clash CSP solver models all weekly course allocations across lecture halls (LT-201, CR-104, Lab-3) and faculty assignments with 0 timetable collisions.
+2. To address your Review 1 directive regarding abrupt HVAC cuts, we engineered a 15-minute hysteresis buffer: if an instructor steps out for 5 minutes or a lecture finishes early, the system does NOT prematurely shut down lighting or air conditioning.
+3. Only if the space remains vacant past 15 consecutive minutes does the controller flag a ghost booking and transition the room to energy-save mode.
+
+Likhith will wrap up our Review 2 deliverables."
+
+
+--- PART 5: LIKHITH S (Wrap-up & Sign-off — 1 Min) ---
+[Action: Likhith presents the physical Review Diary and summarizes deliverable status.]
+
+"To summarize Ma'am:
+- Our AU ERP Gateway, Smart Attendance Bunk Simulator, Zero-Clash Timetable Solver, 2D Campus Navigator, and Microgrid Sankey visualizer are fully functional in our standalone interactive console.
+- We have completed our 5-sheet formal architectural drawing booklet, our 40-page term paper report, and our draft IEEE conference manuscript.
+- Here is our official Review Diary with our weekly progress entries for Weeks 10 through 12. Could you kindly review and sign off on them?
+
+Also Ma'am, two quick questions:
+1. For the upcoming Review 2 panel defense, do you recommend we lead directly with this live interactive console, or start with our 14-slide presentation deck?
+2. Which Scopus or IEEE conference track supported by ASAC would you suggest we target for submitting our paper?"
+
+
+========================================
+❓ HOW TO ANSWER TRICKY QUESTIONS
+========================================
+
+Q: Are there any new physical sensors or simulations installed on campus right now?
+Answer: "No Ma'am. Section 1.6 of the ASAC Process Manual mandates that Design Project 1 is strictly software-based. Our pipeline ingests historical BESCOM utility records, academic ERP timetable dumps, and astronomical solar irradiance curves for Bengaluru coordinates (12.845° N, 77.684° E). The API contracts are structured so physical hardware can plug in seamlessly during Phase 2."
+
+Q: Where did you get the campus layout and measurements?
+Answer: "We mapped the coordinates from open satellite imagery and official university site plans, rendering the structures as clean 2D vector layouts in SVG so the entire 60-acre campus loads in under 50 kilobytes with zero external 3D engine overhead."
+
+Q: How does the attendance bunk calculator help campus resource management?
+Answer: "It correlates student attendance density directly with classroom space utilization. By knowing attendance patterns and subject debarment risks, the campus facility manager can dynamically consolidate low-attendance elective batches into smaller seminar rooms, shutting down large 120-seat lecture halls to save substantial HVAC energy."
+
+Q: What is left for Review 3 and final submission?
+Answer: "Benchmarking historical seasonal billing records against our peak-shaving algorithm, completing multi-batch room allocation stress testing, and submitting our IEEE conference paper."
+
+
+========================================
+🎯 SUMMARY OF WHO DOES WHAT:
+========================================
+- Likhith: Opening, AU ERP Gateway, 2D Campus Navigation, Inspection Drawer, Diary Sign-off.
+- Vinod: Microgrid Flow tab, BESCOM 11 kV + 480 kWp Solar + 1.2 MWh Battery, Dynamic Sankey.
+- Nikhil: AU ERP Data Sync, Course records ingestion, 75% Bunk Simulator math.
+- Kalyan: Zero-clash Timetable solver, Room allocations, 15-minute hysteresis buffer.

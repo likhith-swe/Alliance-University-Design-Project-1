@@ -1,0 +1,103 @@
+{
+  "institution": "Alliance University",
+  "department": "Alliance School of Advanced Computing (ASAC)",
+  "semester": "Semester V (Academic Year 2026-2027)",
+  "data_source": "Alliance ERP Student Academic Gateway",
+  "overall_summary": {
+    "total_classes_conducted": 140,
+    "total_classes_attended": 114,
+    "overall_percentage": 81.43,
+    "institutional_threshold_percent": 75.0,
+    "status": "Good Standing (Safe)"
+  },
+  "courses": [
+    {
+      "code": "E1CSA 316",
+      "name": "Discrete Mathematics",
+      "conducted": 21,
+      "attended": 18,
+      "pct": 85.7,
+      "status": "Safe",
+      "safe_bunks": 3,
+      "room": "LT-201",
+      "faculty": "Prof. sum"
+    },
+    {
+      "code": "E1CSA 348",
+      "name": "Advanced Python Programming",
+      "conducted": 29,
+      "attended": 21,
+      "pct": 72.4,
+      "status": "Shortage (<75%)",
+      "classes_needed_to_recover": 3,
+      "room": "Lab-3",
+      "faculty": "Prof. SEM"
+    },
+    {
+      "code": "E1CSA 108",
+      "name": "Soft Skills - II",
+      "conducted": 10,
+      "attended": 8,
+      "pct": 80.0,
+      "status": "Borderline",
+      "safe_bunks": 0,
+      "room": "CR-104",
+      "faculty": "Prof. V-MOH"
+    },
+    {
+      "code": "E1CSA 313",
+      "name": "Design Project-I",
+      "conducted": 6,
+      "attended": 6,
+      "pct": 100.0,
+      "status": "Moderate",
+      "safe_bunks": 2,
+      "room": "Seminar Hall",
+      "faculty": "Dr. Rashmi Mothkur"
+    },
+    {
+      "code": "E1CSA 317",
+      "name": "Leadership and Management Skills",
+      "conducted": 10,
+      "attended": 7,
+      "pct": 70.0,
+      "status": "Shortage (<75%)",
+      "classes_needed_to_recover": 2,
+      "room": "CR-205",
+      "faculty": "Prof. VAM"
+    },
+    {
+      "code": "E1CSA 400",
+      "name": "Theory of Computation",
+      "conducted": 17,
+      "attended": 16,
+      "pct": 94.1,
+      "status": "Safe",
+      "safe_bunks": 4,
+      "room": "LT-102",
+      "faculty": "Prof. THE"
+    },
+    {
+      "code": "E1CSA 396",
+      "name": "Java Programming",
+      "conducted": 23,
+      "attended": 19,
+      "pct": 82.6,
+      "status": "Moderate",
+      "safe_bunks": 2,
+      "room": "Lab-1",
+      "faculty": "Prof. V-NSH"
+    },
+    {
+      "code": "E1CSA 311",
+      "name": "Cryptography and Network Security",
+      "conducted": 24,
+      "attended": 19,
+      "pct": 79.2,
+      "status": "Moderate",
+      "safe_bunks": 1,
+      "room": "LT-304",
+      "faculty": "Prof. EZL"
+    }
+  ]
+}

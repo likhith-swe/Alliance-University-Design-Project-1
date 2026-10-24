@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" style="background:#0b1120; font-family:'Helvetica Neue', Arial, sans-serif;">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="tierGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Title Block Header -->
+  <rect x="40" y="30" width="1120" height="60" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="60" y="65" fill="#f8fafc" font-size="20" font-weight="bold" letter-spacing="1">5-TIER CYBER-PHYSICAL SYSTEM ARCHITECTURE DIAGRAM</text>
+  <text x="60" y="82" fill="#94a3b8" font-size="12">AI-Powered Smart Campus Resource Management System | Course: E1CSA313 | Batch: DP1-24-28-CSE-GEN-L-01</text>
+  <text x="1000" y="65" fill="#38bdf8" font-size="14" font-weight="bold">ALLIANCE UNIVERSITY</text>
+  <text x="1000" y="82" fill="#64748b" font-size="11">ASAC CSE · SEMESTER V</text>
+
+  <!-- TIER 5: Presentation & Actuation Layer -->
+  <g transform="translate(60, 110)">
+    <rect width="1080" height="100" rx="8" fill="url(#grad1)" stroke="#38bdf8" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="12" height="100" rx="4" fill="#38bdf8"/>
+    <text x="28" y="30" fill="#38bdf8" font-size="14" font-weight="bold">TIER 5: HUMAN-MACHINE INTERACTION &amp; ACTUATION DOCK (CLIENT)</text>
+    <text x="28" y="48" fill="#94a3b8" font-size="11">Zero-install responsive frontend delivering multi-role views, live spatial telemetry &amp; sub-second override controls</text>
+    
+    <rect x="28" y="58" width="240" height="32" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="148" y="79" fill="#f1f5f9" font-size="11" text-anchor="middle">Central Multi-Role Dashboard</text>
+    
+    <rect x="285" y="58" width="240" height="32" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="405" y="79" fill="#f1f5f9" font-size="11" text-anchor="middle">Interactive Building Drawer</text>
+    
+    <rect x="542" y="58" width="240" height="32" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="662" y="79" fill="#f1f5f9" font-size="11" text-anchor="middle">Dynamic D3 Sankey Power Flow</text>
+
+    <rect x="799" y="58" width="250" height="32" rx="4" fill="#1e293b" stroke="#f59e0b"/>
+    <text x="924" y="79" fill="#fde68a" font-size="11" font-weight="bold" text-anchor="middle">Manual Actuator Override Dock</text>
+  </g>
+
+  <!-- Flow Arrows Down -->
+  <line x1="600" y1="210" x2="600" y2="235" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4"/>
+
+  <!-- TIER 4: Spatial WebGL 3D Rendering Layer -->
+  <g transform="translate(60, 235)">
+    <rect width="1080" height="100" rx="8" fill="url(#grad1)" stroke="#818cf8" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="12" height="100" rx="4" fill="#818cf8"/>
+    <text x="28" y="30" fill="#818cf8" font-size="14" font-weight="bold">TIER 4: 3D WEBGL GRAPHICS &amp; SPATIAL SHADER ENGINE</text>
+    <text x="28" y="48" fill="#94a3b8" font-size="11">Procedural Blender geometry pipeline rendering campus assets at 60 FPS under 15 MB VRAM footprint</text>
+    
+    <rect x="28" y="58" width="240" height="32" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="148" y="79" fill="#f1f5f9" font-size="11" text-anchor="middle">Three.js r170 Scene Graph</text>
+    
+    <rect x="285" y="58" width="240" height="32" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="405" y="79" fill="#f1f5f9" font-size="11" text-anchor="middle">OrbitControls &amp; Frustum Culling</text>
+    
+    <rect x="542" y="58" width="240" height="32" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="662" y="79" fill="#f1f5f9" font-size="11" text-anchor="middle">Dynamic Thermal Shaders</text>
+
+    <rect x="799" y="58" width="250" height="32" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="924" y="79" fill="#f1f5f9" font-size="11" text-anchor="middle">Low-Poly Parametric GLB &lt;15MB</text>
+  </g>
+
+  <!-- Flow Arrows Down -->
+  <line x1="600" y1="335" x2="600" y2="360" stroke="#818cf8" stroke-width="2" stroke-dasharray="4"/>
+
+  <!-- TIER 3: Computational & Decision Engine Layer -->
+  <g transform="translate(60, 360)">
+    <rect width="1080" height="110" rx="8" fill="url(#grad1)" stroke="#34d399" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="12" height="110" rx="4" fill="#34d399"/>
+    <text x="28" y="30" fill="#34d399" font-size="14" font-weight="bold">TIER 3: COMPUTATIONAL INTELLIGENCE &amp; DECISION ENGINE</text>
+    <text x="28" y="48" fill="#94a3b8" font-size="11">Core algorithmic layer executing space reclamation, microgrid peak-shaving dispatch &amp; timetable constraint solving</text>
+    
+    <rect x="28" y="58" width="240" height="38" rx="4" fill="#1e293b" stroke="#34d399"/>
+    <text x="148" y="76" fill="#a7f3d0" font-size="11" font-weight="bold" text-anchor="middle">Timetable CSP Solver</text>
+    <text x="148" y="90" fill="#94a3b8" font-size="9" text-anchor="middle">Eliminates 100% room clashes</text>
+    
+    <rect x="285" y="58" width="240" height="38" rx="4" fill="#1e293b" stroke="#34d399"/>
+    <text x="405" y="76" fill="#a7f3d0" font-size="11" font-weight="bold" text-anchor="middle">15-Min Hysteresis Buffer</text>
+    <text x="405" y="90" fill="#94a3b8" font-size="9" text-anchor="middle">Zero false-alarm chiller alerts</text>
+    
+    <rect x="542" y="58" width="240" height="38" rx="4" fill="#1e293b" stroke="#34d399"/>
+    <text x="662" y="76" fill="#a7f3d0" font-size="11" font-weight="bold" text-anchor="middle">1.2 MWh BESS Dispatch</text>
+    <text x="662" y="90" fill="#94a3b8" font-size="9" text-anchor="middle">ToD peak tariff shaving (&gt;18%)</text>
+
+    <rect x="799" y="58" width="250" height="38" rx="4" fill="#1e293b" stroke="#34d399"/>
+    <text x="924" y="76" fill="#a7f3d0" font-size="11" font-weight="bold" text-anchor="middle">Thermal Euler Differential Solver</text>
+    <text x="924" y="90" fill="#94a3b8" font-size="9" text-anchor="middle">Lumped-capacitance building dynamics</text>
+  </g>
+
+  <!-- Flow Arrows Down -->
+  <line x1="600" y1="470" x2="600" y2="495" stroke="#34d399" stroke-width="2" stroke-dasharray="4"/>
+
+  <!-- TIER 2: Telemetry Ingestion Layer -->
+  <g transform="translate(60, 495)">
+    <rect width="1080" height="100" rx="8" fill="url(#grad1)" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="12" height="100" rx="4" fill="#f59e0b"/>
+    <text x="28" y="30" fill="#f59e0b" font-size="14" font-weight="bold">TIER 2: IOT TELEMETRY &amp; REAL-TIME DATA INGESTION ENGINE</text>
+    <text x="28" y="48" fill="#94a3b8" font-size="11">Physics-coupled state engine synthesizing 1,000+ virtual sensor beacons, ERP schedules &amp; weather inputs</text>
+    
+    <rect x="28" y="58" width="240" height="32" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="148" y="79" fill="#f1f5f9" font-size="11" text-anchor="middle">1,000+ Spatial Sensor Beacons</text>
+    
+    <rect x="285" y="58" width="240" height="32" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="405" y="79" fill="#f1f5f9" font-size="11" text-anchor="middle">Alliance ERP Timetable Scraper</text>
+    
+    <rect x="542" y="58" width="240" height="32" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="662" y="79" fill="#f1f5f9" font-size="11" text-anchor="middle">BESCOM Tariff &amp; Meter Feeds</text>
+
+    <rect x="799" y="58" width="250" height="32" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="924" y="79" fill="#f1f5f9" font-size="11" text-anchor="middle">WebSocket State Hydration &lt;100ms</text>
+  </g>
+
+  <!-- Flow Arrows Down -->
+  <line x1="600" y1="595" x2="600" y2="620" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4"/>
+
+  <!-- TIER 1: Physical Infrastructure Layer -->
+  <g transform="translate(60, 620)">
+    <rect width="1080" height="100" rx="8" fill="url(#grad1)" stroke="#f43f5e" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="12" height="100" rx="4" fill="#f43f5e"/>
+    <text x="28" y="30" fill="#f43f5e" font-size="14" font-weight="bold">TIER 1: PHYSICAL CAMPUS INFRASTRUCTURE &amp; ELECTRICAL ASSETS</text>
+    <text x="28" y="48" fill="#94a3b8" font-size="11">Alliance University 60-acre Anekal campus buildings, renewable solar fields &amp; power distribution equipment</text>
+    
+    <rect x="28" y="58" width="200" height="32" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="128" y="79" fill="#f1f5f9" font-size="11" text-anchor="middle">Admin &amp; Library Blocks</text>
+    
+    <rect x="245" y="58" width="200" height="32" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="345" y="79" fill="#f1f5f9" font-size="11" text-anchor="middle">ACED Labs &amp; Classrooms</text>
+    
+    <rect x="462" y="58" width="200" height="32" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="562" y="79" fill="#f1f5f9" font-size="11" text-anchor="middle">480 kWp Rooftop Solar PV</text>
+
+    <rect x="679" y="58" width="200" height="32" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="779" y="79" fill="#f1f5f9" font-size="11" text-anchor="middle">1.2 MWh LiFePO4 BESS</text>
+
+    <rect x="896" y="58" width="153" height="32" rx="4" fill="#1e293b" stroke="#475569"/>
+    <text x="972" y="79" fill="#f1f5f9" font-size="11" text-anchor="middle">Central Chiller Plant</text>
+  </g>
+
+  <!-- Engineering Footer Strip -->
+  <rect x="40" y="740" width="1120" height="40" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="765" fill="#64748b" font-size="10">DRAWING NO: AU-DP1-DWG-001 | SHEET 1 OF 5 | SCALE: N.T.S. | PROJECTION: THIRD ANGLE</text>
+  <text x="800" y="765" fill="#94a3b8" font-size="10">DESIGNED BY: LIKITH S (LEAD) | MENTOR: DR. RASHMI MOTHKUR</text>
+</svg>

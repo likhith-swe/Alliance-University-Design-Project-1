@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" style="background:#0b1120; font-family:'Helvetica Neue', Arial, sans-serif;">
+  <defs>
+    <filter id="shadow5" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Title Block Header -->
+  <rect x="40" y="30" width="1120" height="60" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="60" y="65" fill="#f8fafc" font-size="20" font-weight="bold">ALLIANCE UNIVERSITY ANEKAL CAMPUS: 2D MASTER SITE PLAN &amp; ASSET LAYOUT</text>
+  <text x="60" y="82" fill="#94a3b8" font-size="12">60-Acre Coordinate Geometry · Building Footprints · Rooftop Solar PV · Microgrid Substation Yard</text>
+  <text x="1000" y="65" fill="#38bdf8" font-size="14" font-weight="bold">ALLIANCE UNIVERSITY</text>
+  <text x="1000" y="82" fill="#64748b" font-size="11">ASAC CSE · SEMESTER V</text>
+
+  <!-- Main Plan Frame -->
+  <rect x="40" y="105" width="1120" height="620" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  
+  <!-- Grid Lines -->
+  <g stroke="#1e293b" stroke-width="1">
+    <line x1="40" y1="200" x2="1160" y2="200"/>
+    <line x1="40" y1="300" x2="1160" y2="300"/>
+    <line x1="40" y1="400" x2="1160" y2="400"/>
+    <line x1="40" y1="500" x2="1160" y2="500"/>
+    <line x1="40" y1="600" x2="1160" y2="600"/>
+    <line x1="200" y1="105" x2="200" y2="725"/>
+    <line x1="400" y1="105" x2="400" y2="725"/>
+    <line x1="600" y1="105" x2="600" y2="725"/>
+    <line x1="800" y1="105" x2="800" y2="725"/>
+    <line x1="1000" y1="105" x2="1000" y2="725"/>
+  </g>
+
+  <!-- North Compass Rose -->
+  <g transform="translate(1080, 160)">
+    <circle cx="0" cy="0" r="28" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <polygon points="0,-24 7,0 0,-4 -7,0" fill="#f43f5e"/>
+    <polygon points="0,24 7,0 0,4 -7,0" fill="#94a3b8"/>
+    <text x="0" y="-28" fill="#f43f5e" font-size="11" font-weight="bold" text-anchor="middle">N</text>
+  </g>
+
+  <!-- BUILDINGS FOOTPRINTS -->
+  <!-- 1. Administrative Block -->
+  <g transform="translate(140, 240)">
+    <rect width="180" height="130" rx="6" fill="#1e293b" stroke="#f97316" stroke-width="2" filter="url(#shadow5)"/>
+    <circle cx="90" cy="65" r="35" fill="#334155" opacity="0.4"/>
+    <text x="90" y="60" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">ADMINISTRATIVE BLOCK</text>
+    <text x="90" y="75" fill="#fdba74" font-size="9" text-anchor="middle">Chancellery &amp; Admissions (3 Floors)</text>
+    <text x="90" y="90" fill="#94a3b8" font-size="8" text-anchor="middle">[Coordinates: 0, -18m | 9m x 7m Footprint]</text>
+  </g>
+
+  <!-- 2. Central Library -->
+  <g transform="translate(480, 220)">
+    <rect width="200" height="170" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="2" filter="url(#shadow5)"/>
+    <circle cx="100" cy="85" r="50" fill="#334155" opacity="0.4"/>
+    <text x="100" y="80" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">CENTRAL LIBRARY</text>
+    <text x="100" y="95" fill="#6ee7b7" font-size="9" text-anchor="middle">Knowledge Hub &amp; Rotunda (4 Floors)</text>
+    <text x="100" y="110" fill="#94a3b8" font-size="8" text-anchor="middle">[Coordinates: 0, 0m | 8.6m x 8.6m]</text>
+  </g>
+
+  <!-- 3. ACED Academic & Computing Block -->
+  <g transform="translate(800, 200)">
+    <rect width="220" height="210" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="2" filter="url(#shadow5)"/>
+    <text x="110" y="95" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">ACED ENGINEERING BLOCK</text>
+    <text x="110" y="112" fill="#93c5fd" font-size="9" text-anchor="middle">Computing Labs &amp; Lecture Halls (7 Floors)</text>
+    <text x="110" y="128" fill="#94a3b8" font-size="8" text-anchor="middle">[Coordinates: +24m, +8m | 18 Classrooms]</text>
+    <rect x="20" y="145" width="180" height="40" rx="4" fill="#0f172a" stroke="#f59e0b"/>
+    <text x="110" y="168" fill="#fde68a" font-size="9" font-weight="bold" text-anchor="middle">Rooftop Solar PV: 240 kWp</text>
+  </g>
+
+  <!-- 4. Substation Yard & 1.2 MWh BESS -->
+  <g transform="translate(140, 470)">
+    <rect width="240" height="140" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="2" stroke-dasharray="6,3" filter="url(#shadow5)"/>
+    <text x="120" y="45" fill="#fca5a5" font-size="11" font-weight="bold" text-anchor="middle">11 kV SUBSTATION &amp; BESS YARD</text>
+    <rect x="25" y="65" width="85" height="50" rx="4" fill="#0f172a" stroke="#ef4444"/>
+    <text x="67" y="93" fill="#f8fafc" font-size="9" text-anchor="middle">1000 kVA VCB</text>
+    <rect x="125" y="65" width="90" height="50" rx="4" fill="#0f172a" stroke="#34d399"/>
+    <text x="170" y="93" fill="#a7f3d0" font-size="9" font-weight="bold" text-anchor="middle">1.2 MWh BESS</text>
+  </g>
+
+  <!-- 5. Central Chiller Plant & STP -->
+  <g transform="translate(480, 470)">
+    <rect width="200" height="140" rx="6" fill="#1e293b" stroke="#06b6d4" stroke-width="2" filter="url(#shadow5)"/>
+    <circle cx="60" cy="70" r="30" fill="#0891b2" opacity="0.3"/>
+    <circle cx="140" cy="70" r="30" fill="#0891b2" opacity="0.3"/>
+    <text x="100" y="55" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">CHILLER PLANT &amp; STP</text>
+    <text x="100" y="115" fill="#67e8f9" font-size="9" text-anchor="middle">Central HVAC Pumping Station</text>
+    <text x="100" y="130" fill="#94a3b8" font-size="8" text-anchor="middle">[Automated Setback Actuators]</text>
+  </g>
+
+  <!-- 6. Student Hostels Cluster -->
+  <g transform="translate(800, 480)">
+    <rect width="220" height="130" rx="6" fill="#1e293b" stroke="#8b5cf6" stroke-width="2" filter="url(#shadow5)"/>
+    <text x="110" y="55" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">STUDENT HOSTELS &amp; DINING</text>
+    <text x="110" y="75" fill="#c4b5fd" font-size="9" text-anchor="middle">Residential Blocks (6 Floors)</text>
+    <rect x="20" y="85" width="180" height="30" rx="4" fill="#0f172a" stroke="#f59e0b"/>
+    <text x="110" y="104" fill="#fde68a" font-size="8" font-weight="bold" text-anchor="middle">Rooftop Solar PV: 240 kWp</text>
+  </g>
+
+  <!-- Engineering Footer Strip -->
+  <rect x="40" y="740" width="1120" height="40" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="765" fill="#64748b" font-size="10">DRAWING NO: AU-DP1-DWG-005 | SHEET 5 OF 5 | SCALE: 1:1000 | PROJECTION: THIRD ANGLE</text>
+  <text x="800" y="765" fill="#94a3b8" font-size="10">DESIGNED BY: LIKITH S (LEAD) | MENTOR: DR. RASHMI MOTHKUR</text>
+</svg>

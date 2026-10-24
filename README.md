@@ -1,85 +1,69 @@
 # AI-Powered Smart Campus Resource Management System
 ### Alliance University · Alliance School of Advanced Computing (ASAC)
 **Department of Computer Science & Engineering | Academic Year 2026–2027**  
-**Course:** Design Project – I (E1CSA313 / 5CS1990) | **Batch ID:** `DP1-24-28-CSE-GEN-L-01`  
-**Faculty Coordinator / Mentor:** Dr. Rashmi Mothkur (ASAC CSE)  
+**Course:** Design Project – I (`E1CSA313` / `5CS1990`) | **Batch ID:** `DP1-24-28-CSE-GEN-L-01` | **Section:** L  
+**Faculty Mentor:** Dr. Rashmi Mothkur (Associate Professor, ASAC CSE)  
 **Chief Course Coordinator:** Dr. M. Selvam (ASAC)  
 
 ---
 
-## 1. Project Specifications
-- **Project Title:** AI-Powered Smart Campus Resource Management System
-- **Industry Domain:** Smart Education, Artificial Intelligence, IoT, Data Analytics, Cloud Computing
-- **Core Technology Stack:**
-  - **Programming Languages:** Python, JavaScript, SQL
-  - **Frameworks & Libraries:** TensorFlow, Scikit-Learn, Pandas, NumPy, React.js, Flask / Django
-  - **Databases & Cloud:** PostgreSQL, MongoDB, AWS Cloud, Firebase
-  - **Tools & APIs:** Google Maps API, Campus ERP APIs, Git / GitHub, Docker, Postman
-- **Target Platform:** Web (Desktop & Mobile Responsive) + 3D WebGL Digital Twin
-- **Live Deployment:** [https://smart-campus-digital-twin-eight.vercel.app](https://smart-campus-digital-twin-eight.vercel.app)
-- **Official Repository:** [https://github.com/likhith-swe/Alliance-University-Design-Project-1](https://github.com/likhith-swe/Alliance-University-Design-Project-1)
+## Team Members & Subsystem Ownership
+1. **Likith S** (Reg No: `2411021061437`) — *Team Leader & Lead Graphics/Dashboard Architect*
+2. **Vinodkumar** (Reg No: `2411021061425`) — *Microgrid Analytics & Energy Optimization Lead*
+3. **Nikhil kumar V** (Reg No: `2411021061427`) — *IoT Telemetry & ERP State Simulation Engineer*
+4. **Kalyan kumar T** (Reg No: `2411021061421`) — *Timetable Optimization & Space Intelligence Engineer*
 
 ---
 
-## 2. Core Engineering Objectives
-1. **Centralized Campus Management Dashboard:** Develop a unified, responsive dashboard integrating administrative, faculty, and student portals.
-2. **Real-Time Resource Utilization Monitoring:** Monitor classroom and laboratory utilization, environmental conditions, and occupancy status via IoT sensor telemetry.
-3. **Machine Learning Demand Prediction:** Predict resource demand, identify peak usage periods, and estimate maintenance requirements using machine learning models (LSTM, Random Forest).
-4. **Automated Timetable & Room Allocation:** Optimize timetable scheduling and room allocation automatically using constraint satisfaction algorithms to eliminate clashes.
-5. **Energy Consumption Tracking & Recommendations:** Track electrical energy consumption and recommend automated energy-saving actions and peak-load shaving.
-6. **Administrative Analytics & Decision Support:** Generate comprehensive analytical reports and audit logs for institutional administrators.
+## Review Master Directory Structure (4 Core Review Requirements)
 
----
-
-## 3. Team Members & Subsystem Ownership
-1. **Likith S** (Reg No: `2411021061437`) — *Team Leader & Lead Graphics/Dashboard Architect*  
-   - Subsystem: Centralized Multi-Role Dashboard, React 19 UI/UX, 3D WebGL Digital Twin Engine & Parametric Blender Pipeline.
-2. **Vinodkumar** (Reg No: `2411021061425`) — *Microgrid Analytics & Energy Optimization Lead*  
-   - Subsystem: Real-time SVG Sankey power routing, solar generation trigonometric curve, 1.2 MWh BESS peak-shaving dispatch.
-3. **Nikhil kumar V** (Reg No: `2411021061427`) — *IoT Telemetry & State Simulation Engineer*  
-   - Subsystem: 1,000+ virtual sensor nodes, environmental telemetry streaming, WebSocket ingestion, and literature review synthesis.
-4. **Kalyan kumar T** (Reg No: `2411021061421`) — *Timetable Optimization & Space Intelligence Engineer*  
-   - Subsystem: Constraint Satisfaction timetable solver, ghost-booking detection heuristics, and automated HVAC setbacks.
-
----
-
-## 4. Master Deliverables Directory Structure
-All project deliverables follow a unified single-format standard (PDF) without duplicates, underscores, or slashes:
+This directory is organized into four standardized subfolders corresponding to the exact evaluation criteria required by the review committee:
 
 ```
-Design_Project_I/
-├── Review Diary Dr Rashmi Mothkur.pdf
-├── AI Powered Smart Campus Resource Management System Term Paper Report.pdf
-├── AI Powered Smart Campus Resource Management System Presentation Deck.pdf
-├── AI Powered Smart Campus Resource Management System Conference Paper.pdf
-├── 01 Problem Statement and Engineering Scope.pdf
-├── 02 Project Objectives and Expected Outcomes.pdf
-├── 03 Complex Engineering Problems Analysis.pdf
-├── 04 Systematic Literature Review Table.pdf
-├── 05 Project Outcomes and Performance Benchmarks.pdf
-├── 06 Process Manual Compliance Summary.pdf
-├── Review 0 Presentation Script and Technical Defense Guide.pdf
-├── Review 0 Presentation Script and Technical Defense Guide.md
-├── Review 1 Technical Defense Guide.pdf
-├── Review 1 Preparation and Defense Presentation.pptx
-├── Review 1 Preparation and Defense Presentation.pdf
-├── Design Project Guidelines and Evaluation Rubrics v2.4.pdf
-├── Process Manual on Design Project Dr M Selvam.pdf
-├── README.md
-└── AI Powered Smart Campus Resource Management System Complete Package.zip
+Design Project/
+├── 📁 01_Source_Code/
+│   ├── Frontend_UI_Components/          (React 19, TypeScript, Lucide, Tailwind CSS)
+│   ├── digital_twin_3d/                 (Three.js WebGL engine & 60-acre campus 3D GLB model)
+│   ├── generate_preview.py              (Dashboard build generator)
+│   ├── AI_Powered_Smart_Campus_Complete_Source_Code.zip (Consolidated code archive)
+│   └── README_SOURCE_CODE.md            (GitHub repository links & setup instructions)
+│
+├── 📁 02_Dataset/
+│   ├── 01_AU_ERP_Academic_Attendance_Dataset.csv & .json (8 registered subjects attendance logs)
+│   ├── 02_Campus_Electrical_Power_Utility_Dataset.csv   (14,200 kWh/day baseline, sub-metering, BESCOM HT-2b ToD)
+│   ├── 03_Campus_Solar_PV_Irradiance_Dataset.csv        (480 kWp rooftop solar hourly generation curve)
+│   ├── 04_Campus_Room_Schedule_and_Occupancy_Dataset.csv (Classroom capacities, timetable, ghost booking)
+│   └── DATASET_SPECIFICATION_AND_PROVENANCE.md          (Provenance, DPDP Act 2023 compliance, formulas)
+│
+├── 📁 03_Demonstration/
+│   ├── 00_INTERACTIVE_PREVIEW_SMART_CAMPUS.html         (Full standalone 3D interactive dashboard)
+│   ├── 00_OPEN_LIVE_DEMO.html                           (Quick browser launcher)
+│   ├── 01_LIVE_DEMO_DEPLOYMENT_LINKS.md                 (Live Vercel URL, credentials, walkthrough)
+│   └── 02_TEAM_PRESENTATION_SCRIPT_AND_VIVA_GUIDE.txt   (Turn-by-turn presentation script & Q&A defense)
+│
+├── 📁 04_Architecture/
+│   ├── AU_DP1_DWG_001_5_Tier_Cyber_Physical_System_Architecture.png & .svg
+│   ├── Sheet_1_Cyber_Physical_System_Architecture.pdf   (5-Tier Cyber-Physical System Architecture)
+│   ├── Sheet_2_DFD_Level_0_and_Level_1_Process_Pipeline.pdf (DFD Level 0 & 1 Data Flow Pipeline)
+│   ├── Sheet_3_UML_Components_and_Hysteresis_Lifecycle.pdf  (UML Component & Sequence Diagrams)
+│   ├── Sheet_4_Microgrid_Single_Line_Diagram_SLD.pdf        (Microgrid Single Line Diagram)
+│   ├── Sheet_5_Alliance_Campus_Master_Site_Plan.pdf         (60-Acre Campus Master Site Plan)
+│   ├── Alliance_Smart_Campus_Engineering_Drawings_and_Schematics.pdf (Complete 5-Sheet drawing booklet)
+│   └── ARCHITECTURE_SPECIFICATION.md
+│
+└── 📁 05_Documentation_and_Reports/
+    ├── 01_Review_Defense_Report.pdf                     (Comprehensive Review defense report)
+    ├── 02_Review_2_Presentation.pdf                     (14-slide panel defense presentation)
+    ├── 03_Review_Diary_Dr_Rashmi_Mothkur.pdf            (Official ASAC Review Diary logbook)
+    ├── 04_IEEE_Conference_Paper.pdf                     (IEEE format conference paper draft)
+    ├── 05_Term_Paper_Report.pdf                         (Full technical term paper report)
+    ├── Process Manual on Design Project Dr M Selvam.pdf (Official course process manual)
+    └── Design Project Guidelines and Evaluation Rubrics v2.4.pdf
 ```
 
 ---
 
-## 5. Review-I / Review 0 Presentation & Defense Guide
-- **Direct GitHub Document:** [Review 0 Presentation Script and Technical Defense Guide.pdf](https://github.com/likhith-swe/Alliance-University-Design-Project-1/blob/main/Review%200%20Presentation%20Script%20and%20Technical%20Defense%20Guide.pdf)
-- **Markdown Edition:** [Review 0 Presentation Script and Technical Defense Guide.md](https://github.com/likhith-swe/Alliance-University-Design-Project-1/blob/main/Review%200%20Presentation%20Script%20and%20Technical%20Defense%20Guide.md)
-- **Master Google Drive Folder:** [Google Drive Shareable Folder](https://drive.google.com/open?id=1RNZK3fvyZiyCHCl05WUUlHI2I_noIK2G)
-
-
----
-
-## 5. Academic Integrity & Compliance
-- **Anti-Plagiarism Screening:** Verified using institutional DrillBit / Turnitin software (<8% similarity index, permissible ceiling <10%).
-- **Process Manual Conformance:** 100% compliant with Sections 1.1 to 1.6 and Section 4.9 of the ASAC Process Manual.
-- **Ethical Standards:** Fully non-intrusive spatial sensing with zero biometric or facial recognition tracking.
+## Live Links & Quick Access
+* **Live Web Deployment:** [https://smart-campus-dashboard-web.vercel.app](https://smart-campus-dashboard-web.vercel.app)
+* **Official GitHub Repository:** [https://github.com/likhith-swe/Alliance-University-Design-Project-1](https://github.com/likhith-swe/Alliance-University-Design-Project-1)
+* **Offline Demo:** Double-click `03_Demonstration/00_INTERACTIVE_PREVIEW_SMART_CAMPUS.html` in Chrome/Edge/Safari.

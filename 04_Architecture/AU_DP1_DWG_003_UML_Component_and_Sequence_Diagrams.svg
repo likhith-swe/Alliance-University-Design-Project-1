@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" style="background:#0b1120; font-family:'Helvetica Neue', Arial, sans-serif;">
+  <defs>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="umlArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="umlDashArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 8 5 L 0 8 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- Title Block Header -->
+  <rect x="40" y="30" width="1120" height="60" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="60" y="65" fill="#f8fafc" font-size="20" font-weight="bold">UML SPECIFICATION: COMPONENT DECOMPOSITION &amp; SEQUENCE LIFECYCLE</text>
+  <text x="60" y="82" fill="#94a3b8" font-size="12">Software Engineering Contracts &amp; 15-Minute Hysteresis Sequence Lifecycle</text>
+  <text x="1000" y="65" fill="#38bdf8" font-size="14" font-weight="bold">ALLIANCE UNIVERSITY</text>
+  <text x="1000" y="82" fill="#64748b" font-size="11">ASAC CSE · SEMESTER V</text>
+
+  <!-- LEFT: UML COMPONENT DIAGRAM -->
+  <g transform="translate(60, 110)">
+    <rect width="520" height="610" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <text x="260" y="35" fill="#818cf8" font-size="14" font-weight="bold" text-anchor="middle">&lt;&lt;component&gt;&gt; SUBSYSTEM DECOMPOSITION</text>
+    
+    <!-- Component: ThreeScene -->
+    <rect x="40" y="60" width="200" height="65" rx="4" fill="#1e293b" stroke="#818cf8" stroke-width="1.5" filter="url(#shadow3)"/>
+    <rect x="30" y="70" width="20" height="12" fill="#818cf8"/>
+    <rect x="30" y="90" width="20" height="12" fill="#818cf8"/>
+    <text x="140" y="90" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">ThreeCanvasEngine</text>
+    <text x="140" y="106" fill="#94a3b8" font-size="8" text-anchor="middle">60 FPS WebGL Scene Graph</text>
+
+    <!-- Component: StateEngine -->
+    <rect x="280" y="60" width="200" height="65" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" filter="url(#shadow3)"/>
+    <rect x="270" y="70" width="20" height="12" fill="#38bdf8"/>
+    <rect x="270" y="90" width="20" height="12" fill="#38bdf8"/>
+    <text x="380" y="90" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">CampusStateEngine</text>
+    <text x="380" y="106" fill="#94a3b8" font-size="8" text-anchor="middle">Telemetry Hydration (&lt;100ms)</text>
+
+    <!-- Component: CSPScheduler -->
+    <rect x="40" y="200" width="200" height="65" rx="4" fill="#1e293b" stroke="#34d399" stroke-width="1.5" filter="url(#shadow3)"/>
+    <rect x="30" y="210" width="20" height="12" fill="#34d399"/>
+    <rect x="30" y="230" width="20" height="12" fill="#34d399"/>
+    <text x="140" y="230" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">CSPScheduler</text>
+    <text x="140" y="246" fill="#94a3b8" font-size="8" text-anchor="middle">Constraint Solver / Timetables</text>
+
+    <!-- Component: SankeyVisualizer -->
+    <rect x="280" y="200" width="200" height="65" rx="4" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow3)"/>
+    <rect x="270" y="210" width="20" height="12" fill="#f59e0b"/>
+    <rect x="270" y="230" width="20" height="12" fill="#f59e0b"/>
+    <text x="380" y="230" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">SankeyEnergyRouter</text>
+    <text x="380" y="246" fill="#94a3b8" font-size="8" text-anchor="middle">D3 SVG Flow Calculations</text>
+
+    <!-- Component: SpaceReclaimer -->
+    <rect x="160" y="340" width="200" height="65" rx="4" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5" filter="url(#shadow3)"/>
+    <rect x="150" y="350" width="20" height="12" fill="#f43f5e"/>
+    <rect x="150" y="370" width="20" height="12" fill="#f43f5e"/>
+    <text x="260" y="370" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">SpaceReclaimerAgent</text>
+    <text x="260" y="386" fill="#94a3b8" font-size="8" text-anchor="middle">15-min Hysteresis Logic</text>
+
+    <!-- Interfaces and Connections -->
+    <line x1="240" y1="92" x2="280" y2="92" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#umlArrow)"/>
+    <line x1="140" y1="125" x2="140" y2="200" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#umlArrow)"/>
+    <line x1="380" y1="125" x2="380" y2="200" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#umlArrow)"/>
+    <line x1="140" y1="265" x2="220" y2="340" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#umlArrow)"/>
+    <line x1="380" y1="265" x2="300" y2="340" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#umlArrow)"/>
+
+    <!-- Database Artifact -->
+    <rect x="160" y="480" width="200" height="50" rx="8" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="260" y="505" fill="#f1f5f9" font-size="10" font-weight="bold" text-anchor="middle">&lt;&lt;database&gt;&gt; CampusStateStore</text>
+    <text x="260" y="519" fill="#94a3b8" font-size="8" text-anchor="middle">PostgreSQL / In-Memory State</text>
+    <line x1="260" y1="405" x2="260" y2="480" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3" marker-end="url(#umlDashArrow)"/>
+  </g>
+
+  <!-- RIGHT: UML SEQUENCE DIAGRAM -->
+  <g transform="translate(620, 110)">
+    <rect width="520" height="610" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <text x="260" y="35" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle">SEQUENCE: 15-MIN HYSTERESIS GHOST-BOOKING LIFECYCLE</text>
+
+    <!-- Lifelines -->
+    <!-- ERP -->
+    <rect x="20" y="60" width="80" height="30" rx="4" fill="#1e293b" stroke="#64748b"/>
+    <text x="60" y="80" fill="#f1f5f9" font-size="9" text-anchor="middle">ERP Schedule</text>
+    <line x1="60" y1="90" x2="60" y2="580" stroke="#475569" stroke-width="1" stroke-dasharray="4"/>
+
+    <!-- Sensor -->
+    <rect x="125" y="60" width="80" height="30" rx="4" fill="#1e293b" stroke="#64748b"/>
+    <text x="165" y="80" fill="#f1f5f9" font-size="9" text-anchor="middle">RoomSensor</text>
+    <line x1="165" y1="90" x2="165" y2="580" stroke="#475569" stroke-width="1" stroke-dasharray="4"/>
+
+    <!-- Reclaimer -->
+    <rect x="230" y="60" width="90" height="30" rx="4" fill="#1e293b" stroke="#f43f5e"/>
+    <text x="275" y="80" fill="#fda4af" font-size="9" font-weight="bold" text-anchor="middle">SpaceReclaimer</text>
+    <line x1="275" y1="90" x2="275" y2="580" stroke="#475569" stroke-width="1" stroke-dasharray="4"/>
+
+    <!-- Chiller Plant -->
+    <rect x="345" y="60" width="75" height="30" rx="4" fill="#1e293b" stroke="#64748b"/>
+    <text x="382" y="80" fill="#f1f5f9" font-size="9" text-anchor="middle">ChillerPlant</text>
+    <line x1="382" y1="90" x2="382" y2="580" stroke="#475569" stroke-width="1" stroke-dasharray="4"/>
+
+    <!-- Facilities -->
+    <rect x="440" y="60" width="65" height="30" rx="4" fill="#1e293b" stroke="#64748b"/>
+    <text x="472" y="80" fill="#f1f5f9" font-size="9" text-anchor="middle">Technician</text>
+    <line x1="472" y1="90" x2="472" y2="580" stroke="#475569" stroke-width="1" stroke-dasharray="4"/>
+
+    <!-- Messages -->
+    <!-- 1: ERP active -->
+    <line x1="60" y1="130" x2="275" y2="130" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#umlArrow)"/>
+    <text x="160" y="122" fill="#94a3b8" font-size="8" text-anchor="middle">1: Class scheduled (09:00)</text>
+
+    <!-- 2: Sensor Telemetry -->
+    <line x1="165" y1="170" x2="275" y2="170" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#umlArrow)"/>
+    <text x="220" y="162" fill="#94a3b8" font-size="8" text-anchor="middle">2: Occupancy = 0</text>
+
+    <!-- Self: Start Hysteresis -->
+    <rect x="268" y="200" width="14" height="150" fill="#f43f5e" opacity="0.8"/>
+    <path d="M 275 200 C 310 200, 310 230, 275 230" fill="none" stroke="#f43f5e" stroke-width="1.5" marker-end="url(#umlArrow)"/>
+    <text x="330" y="218" fill="#fda4af" font-size="8">3: Start 15-min timer</text>
+
+    <!-- Transient break: ignore -->
+    <text x="330" y="250" fill="#94a3b8" font-size="8">[0 &lt; t &lt; 15 min: suppress alert]</text>
+
+    <!-- Timer Expiry -->
+    <text x="330" y="340" fill="#f43f5e" font-size="8" font-weight="bold">4: t &gt;= 15 min (Ghost Confirmed)</text>
+
+    <!-- Setback alert -->
+    <line x1="275" y1="390" x2="382" y2="390" stroke="#f43f5e" stroke-width="1.5" marker-end="url(#umlArrow)"/>
+    <text x="330" y="382" fill="#fda4af" font-size="8" text-anchor="middle">5: Setback Chiller (+3.0°C)</text>
+
+    <line x1="275" y1="430" x2="472" y2="430" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#umlArrow)"/>
+    <text x="370" y="422" fill="#fde68a" font-size="8" text-anchor="middle">6: Push Notification to Dashboard</text>
+
+    <line x1="472" y1="470" x2="275" y2="470" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3" marker-end="url(#umlDashArrow)"/>
+    <text x="370" y="462" fill="#cbd5e1" font-size="8" text-anchor="middle">7: Acknowledge &amp; Confirm</text>
+  </g>
+
+  <!-- Engineering Footer Strip -->
+  <rect x="40" y="740" width="1120" height="40" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="765" fill="#64748b" font-size="10">DRAWING NO: AU-DP1-DWG-003 | SHEET 3 OF 5 | SCALE: N.T.S. | PROJECTION: THIRD ANGLE</text>
+  <text x="800" y="765" fill="#94a3b8" font-size="10">DESIGNED BY: LIKITH S (LEAD) | MENTOR: DR. RASHMI MOTHKUR</text>
+</svg>

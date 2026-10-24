@@ -1,0 +1,14 @@
+Hour of Day,Time Window,Global Horizontal Irradiance (W/m2),480 kWp Rooftop Solar Output (kW),Microgrid Grid Offset (%),BESS Charge State
+06:00,06:00 - 07:00,45,0.0,0.0%,Idle
+07:00,07:00 - 08:00,112,18.4,2.2%,Idle
+08:00,08:00 - 09:00,280,64.2,7.6%,Charging BESS
+09:00,09:00 - 10:00,520,142.5,16.9%,Charging BESS
+10:00,10:00 - 11:00,740,235.8,28.0%,Charging BESS
+11:00,11:00 - 12:00,910,318.6,37.8%,Full Solar Self-Consumption
+12:00,12:00 - 13:00,985,382.4,45.4%,Full Solar Self-Consumption
+13:00,13:00 - 14:00,1020,412.0,48.9%,Peak Solar Production
+14:00,14:00 - 15:00,940,368.5,43.7%,Surplus Diverted to Thermal Cooling
+15:00,15:00 - 16:00,720,274.2,32.5%,Self-Consumption
+16:00,16:00 - 17:00,460,165.1,19.6%,Self-Consumption
+17:00,17:00 - 18:00,180,58.0,6.9%,BESS Switching to Standby
+18:00,18:00 - 19:00,20,4.2,0.5%,BESS Discharge Initiated (Peak Shaving)
