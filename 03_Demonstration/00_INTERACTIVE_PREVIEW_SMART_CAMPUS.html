@@ -158,11 +158,6 @@
           <span>3D Campus Digital Twin</span>
         </button>
 
-        <button onclick="switchTab('navigation')" id="nav-navigation" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 transition text-left">
-          <i data-lucide="map-pin" class="w-4 h-4"></i>
-          <span>Campus Navigation & Directory</span>
-        </button>
-
         <button onclick="switchTab('attendance')" id="nav-attendance" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 transition text-left">
           <i data-lucide="user-check" class="w-4 h-4"></i>
           <span>Smart Attendance (AU ERP)</span>
@@ -173,26 +168,9 @@
           <span>Timetable (Zero-Clash CSP)</span>
         </button>
 
-        <button onclick="switchTab('library')" id="nav-library" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 transition text-left">
-          <i data-lucide="book-open" class="w-4 h-4"></i>
-          <span>Library Resource Management</span>
-        </button>
-
-        <button onclick="switchTab('events')" id="nav-events" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 transition text-left">
-          <i data-lucide="calendar-days" class="w-4 h-4"></i>
-          <span>Campus Event Management</span>
-        </button>
-
         <button onclick="switchTab('energy')" id="nav-energy" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 transition text-left">
           <i data-lucide="zap" class="w-4 h-4"></i>
           <span>Energy & Microgrid Routing</span>
-        </button>
-
-        <div class="pt-3 px-3 py-1.5 text-[10px] uppercase font-bold tracking-wider text-slate-400">Academic Review</div>
-
-        <button onclick="switchTab('rubrics')" id="nav-rubrics" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 transition text-left">
-          <i data-lucide="award" class="w-4 h-4"></i>
-          <span>Review 2 Rubrics (ASAC)</span>
         </button>
       </div>
 
@@ -515,7 +493,7 @@
             </div>
 
             <div class="flex items-center gap-2">
-              <a href="https://smart-campus-dashboard-web.vercel.app" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 hover:text-sky-600 transition shadow-sm">
+              <a href="https://smart-campus-digital-twin-eight.vercel.app" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 hover:text-sky-600 transition shadow-sm">
                 <i data-lucide="external-link" class="w-3.5 h-3.5 text-sky-500"></i>
                 Open Live Vercel App ↗
               </a>
@@ -534,117 +512,11 @@
           <div id="digitalTwinContainer" class="relative w-full rounded-2xl overflow-hidden border border-slate-300 shadow-2xl bg-[#070D18]">
             <iframe 
               id="digitalTwinFrame" 
-              src="https://smart-campus-dashboard-web.vercel.app" 
+              src="https://smart-campus-digital-twin-eight.vercel.app" 
               class="w-full h-[760px] border-0" 
               allow="fullscreen; accelerometer; gyroscope"
               title="Alliance University Smart Campus Digital Twin Production Viewport"
             ></iframe>
-          </div>
-        </div>
-
-      </section>
-
-      <!-- ========================================== -->
-      <!-- TAB: CAMPUS NAVIGATION & FACILITY DIRECTORY -->
-      <!-- ========================================== -->
-      <section id="tab-navigation" class="space-y-6 hidden">
-        
-        <!-- HEADER & MASTER PLAN METRICS -->
-        <div class="glass-card p-6 rounded-2xl border border-slate-200">
-          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="text-xs font-mono font-semibold text-sky-600 uppercase tracking-wider">Spatial Wayfinding & Directory</span>
-                <span class="text-[10px] px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold">60 Acres Campus Grid</span>
-              </div>
-              <h3 class="text-xl font-bold text-slate-900 mt-1">Alliance University Campus Navigation & Facility Directory</h3>
-              <p class="text-xs text-slate-500">Searchable architectural facilities, live occupancy telemetry, building waypoints, and ADA accessible routes.</p>
-            </div>
-
-            <!-- SEARCH & FILTERS -->
-            <div class="flex flex-wrap items-center gap-2">
-              <div class="relative">
-                <i data-lucide="search" class="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5"></i>
-                <input type="text" id="facilitySearchInput" oninput="filterFacilities()" placeholder="Search facility, block or lab..." class="pl-8 pr-3 py-1.5 rounded-xl border border-slate-200 text-xs w-64 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900">
-              </div>
-
-              <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-xl text-xs" id="facilityFilterChips">
-                <button onclick="setFacilityFilter('all', this)" class="px-2.5 py-1 rounded-lg font-semibold bg-white text-slate-900 shadow-sm transition">All</button>
-                <button onclick="setFacilityFilter('academic', this)" class="px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition">Academic</button>
-                <button onclick="setFacilityFilter('library', this)" class="px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition">Library</button>
-                <button onclick="setFacilityFilter('hostel', this)" class="px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition">Hostels</button>
-                <button onclick="setFacilityFilter('sports', this)" class="px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition">Sports</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- QUICK WAYFINDING & ROUTE CALCULATOR -->
-          <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/70 mb-6">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3">
-              <div class="flex items-center gap-2">
-                <i data-lucide="navigation" class="w-4 h-4 text-sky-600"></i>
-                <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Campus Route Planner & Walking Waypoints</h4>
-              </div>
-              <span class="text-[11px] text-slate-500 font-mono">Pedestrian & Wheelchair Accessible Paths</span>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 items-end">
-              <div class="sm:col-span-4">
-                <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Starting Point</label>
-                <select id="routeStartSelect" class="w-full px-3 py-2 rounded-xl border border-slate-200 bg-white text-xs font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900">
-                  <option value="main_gate">📍 Campus Main Gate (East Entrance)</option>
-                  <option value="parking">🚗 Surface Parking Quad</option>
-                  <option value="admin">🏛️ Neoclassical Admin Rotunda</option>
-                  <option value="chintan">🏢 Chintan Academic Block (ACED)</option>
-                  <option value="library">📚 Central Library Rotunda</option>
-                  <option value="hostels">🏠 Student Residential Wing</option>
-                  <option value="sports">⚽ Sports Complex & Cricket Ground</option>
-                </select>
-              </div>
-
-              <div class="sm:col-span-4">
-                <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Destination</label>
-                <select id="routeDestSelect" class="w-full px-3 py-2 rounded-xl border border-slate-200 bg-white text-xs font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900">
-                  <option value="chintan" selected>🏢 Chintan Academic Block (ACED)</option>
-                  <option value="library">📚 Central Library Rotunda</option>
-                  <option value="admin">🏛️ Neoclassical Admin Rotunda</option>
-                  <option value="hostels">🏠 Student Residential Wing</option>
-                  <option value="sports">⚽ Sports Complex & Cricket Ground</option>
-                  <option value="parking">🚗 Surface Parking Quad</option>
-                  <option value="main_gate">📍 Campus Main Gate</option>
-                </select>
-              </div>
-
-              <div class="sm:col-span-4 flex gap-2">
-                <button onclick="calculateCampusRoute()" class="flex-1 py-2 px-3 rounded-xl bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition flex items-center justify-center gap-1.5 shadow-sm">
-                  <i data-lucide="route" class="w-3.5 h-3.5"></i>
-                  Find Walking Route
-                </button>
-                <button onclick="switchTab('campus3d')" class="py-2 px-3 rounded-xl border border-slate-300 bg-white text-slate-700 text-xs font-semibold hover:bg-slate-50 hover:text-sky-600 transition flex items-center gap-1 shadow-sm" title="View 3D Campus Model">
-                  <i data-lucide="box" class="w-3.5 h-3.5"></i>
-                  3D View
-                </button>
-              </div>
-            </div>
-
-            <!-- Route Output Card -->
-            <div id="routeOutputCard" class="mt-4 p-3.5 rounded-xl bg-white border border-slate-200 hidden">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-2 mb-2">
-                <div class="flex items-center gap-2">
-                  <span id="routeDistanceBadge" class="text-xs font-mono font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">180 meters</span>
-                  <span id="routeTimeBadge" class="text-xs font-mono text-slate-600">~ 2.5 min walking time</span>
-                </div>
-                <span class="text-[10px] text-sky-600 font-semibold flex items-center gap-1">
-                  <i data-lucide="accessibility" class="w-3 h-3"></i> 100% Step-free Ramp Access
-                </span>
-              </div>
-              <p id="routeDirectionsText" class="text-xs text-slate-700 leading-relaxed font-sans"></p>
-            </div>
-          </div>
-
-          <!-- FACILITY CARDS GRID -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="facilityCardsContainer">
-            <!-- Dynamically populated via JS renderFacilityCards() -->
           </div>
         </div>
 
@@ -790,134 +662,6 @@
 
       <!-- ========================================== -->
       <!-- TAB 5: LIBRARY & DESK ALLOCATION           -->
-      <!-- ========================================== -->
-      <section id="tab-library" class="space-y-6 hidden">
-        <div class="glass-card p-6 rounded-2xl border border-slate-200">
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="text-xs font-mono font-semibold text-sky-600 uppercase tracking-wider">Rotunda Dome Facility</span>
-                <span class="text-[10px] px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold">50,000 Sq Ft</span>
-                <span class="text-[10px] px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-mono font-semibold">Open 08:00 – 23:00</span>
-              </div>
-              <h3 class="text-xl font-bold text-slate-900 mt-1">Central Library Resource Management & Seat Allocation</h3>
-              <p class="text-xs text-slate-500">Floor-by-floor study desk occupancy, quiet zones, digital catalog reservations, and IEEE terminal access.</p>
-            </div>
-
-            <div class="flex items-center gap-2">
-              <input type="text" id="libraryBookSearch" onkeydown="if(event.key==='Enter') searchLibraryBooks()" placeholder="Search textbook, author, or ISBN..." class="px-3.5 py-1.5 rounded-xl border border-slate-200 text-xs w-64 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900">
-              <button onclick="searchLibraryBooks()" class="px-3.5 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition flex items-center gap-1.5 shadow-sm">
-                <i data-lucide="search" class="w-3.5 h-3.5"></i>
-                Search Books
-              </button>
-            </div>
-          </div>
-
-          <!-- 4 Floors Overview Cards -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">
-              <div class="flex justify-between items-center mb-2">
-                <span class="text-xs font-bold text-slate-900">Floor 1: Book Stacks</span>
-                <span class="text-[11px] font-mono text-emerald-600 font-bold">68% Full</span>
-              </div>
-              <div class="w-full bg-slate-100 rounded-full h-2 mb-2">
-                <div class="bg-emerald-500 h-2 rounded-full" style="width: 68%"></div>
-              </div>
-              <p class="text-[11px] text-slate-500">32 Desks Free • Print Circulation</p>
-            </div>
-
-            <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">
-              <div class="flex justify-between items-center mb-2">
-                <span class="text-xs font-bold text-slate-900">Floor 2: Quiet Reading</span>
-                <span class="text-[11px] font-mono text-amber-600 font-bold">84% Full</span>
-              </div>
-              <div class="w-full bg-slate-100 rounded-full h-2 mb-2">
-                <div class="bg-amber-500 h-2 rounded-full" style="width: 84%"></div>
-              </div>
-              <p class="text-[11px] text-slate-500">14 Desks Free • Silence Zone</p>
-            </div>
-
-            <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">
-              <div class="flex justify-between items-center mb-2">
-                <span class="text-xs font-bold text-slate-900">Floor 3: Digital Lab</span>
-                <span class="text-[11px] font-mono text-emerald-600 font-bold">42% Full</span>
-              </div>
-              <div class="w-full bg-slate-100 rounded-full h-2 mb-2">
-                <div class="bg-emerald-500 h-2 rounded-full" style="width: 42%"></div>
-              </div>
-              <p class="text-[11px] text-slate-500">58 Workstations Free • IEEE Access</p>
-            </div>
-
-            <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">
-              <div class="flex justify-between items-center mb-2">
-                <span class="text-xs font-bold text-slate-900">Floor 4: Collaborative</span>
-                <span class="text-[11px] font-mono text-rose-600 font-bold">91% Full</span>
-              </div>
-              <div class="w-full bg-slate-100 rounded-full h-2 mb-2">
-                <div class="bg-rose-500 h-2 rounded-full" style="width: 91%"></div>
-              </div>
-              <p class="text-[11px] text-slate-500">4 Cubicles Free • Discussion</p>
-            </div>
-          </div>
-
-          <!-- INTERACTIVE SEAT RESERVATION SIMULATOR -->
-          <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/60 mb-6">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
-              <div>
-                <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Floor 2 Study Commons · Interactive Seat Booking</h4>
-                <p class="text-[11px] text-slate-500">Click any available seat to simulate reservation or release. Live vacancy updates instantly.</p>
-              </div>
-              <div class="flex items-center gap-4 text-xs font-medium">
-                <span class="flex items-center gap-1.5"><span class="h-3 w-3 rounded bg-emerald-500"></span> Available (<span id="availSeatsCount">14</span>)</span>
-                <span class="flex items-center gap-1.5"><span class="h-3 w-3 rounded bg-slate-300"></span> Occupied (10)</span>
-                <span class="flex items-center gap-1.5"><span class="h-3 w-3 rounded bg-sky-600"></span> Your Booking</span>
-              </div>
-            </div>
-
-            <!-- 24 Desks Grid -->
-            <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2.5" id="seatGrid">
-              <!-- Rendered via JS renderSeats() -->
-            </div>
-          </div>
-
-          <!-- POPULAR ENGINEERING TEXTBOOKS QUICK ACCESS -->
-          <div class="border-t border-slate-200 pt-5">
-            <div class="flex items-center justify-between mb-3">
-              <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Alliance Digital Library · Fast Textbooks Lookup</h4>
-              <button onclick="openLibrarySearchModal('all')" class="text-xs text-sky-600 font-semibold hover:underline">View All Books ↗</button>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              <div class="p-3 rounded-xl bg-white border border-slate-200 flex justify-between items-start gap-2 shadow-sm">
-                <div>
-                  <span class="text-[10px] font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-bold">Available (Floor 1)</span>
-                  <h5 class="text-xs font-bold text-slate-900 mt-1">Artificial Intelligence: A Modern Approach</h5>
-                  <p class="text-[11px] text-slate-500">Russell & Norvig · Call: QA76.R87</p>
-                </div>
-                <button onclick="showToast('Reserved: Artificial Intelligence: A Modern Approach', 'success')" class="text-[11px] font-semibold px-2.5 py-1 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition shrink-0">Hold</button>
-              </div>
-
-              <div class="p-3 rounded-xl bg-white border border-slate-200 flex justify-between items-start gap-2 shadow-sm">
-                <div>
-                  <span class="text-[10px] font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-bold">Available (Floor 3)</span>
-                  <h5 class="text-xs font-bold text-slate-900 mt-1">Cloud Computing: Principles & Paradigms</h5>
-                  <p class="text-[11px] text-slate-500">Rajkumar Buyya · Call: QA76.585</p>
-                </div>
-                <button onclick="showToast('Reserved: Cloud Computing: Principles & Paradigms', 'success')" class="text-[11px] font-semibold px-2.5 py-1 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition shrink-0">Hold</button>
-              </div>
-
-              <div class="p-3 rounded-xl bg-white border border-slate-200 flex justify-between items-start gap-2 shadow-sm">
-                <div>
-                  <span class="text-[10px] font-mono text-amber-700 bg-amber-50 px-2 py-0.5 rounded font-bold">Checked Out (Due Nov 02)</span>
-                  <h5 class="text-xs font-bold text-slate-900 mt-1">Discrete Mathematical Structures</h5>
-                  <p class="text-[11px] text-slate-500">Tremblay & Manohar · Call: QA39.2</p>
-                </div>
-                <button onclick="showToast('Added to waitlist for Discrete Mathematical Structures', 'info')" class="text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-50 transition shrink-0">Waitlist</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- ========================================== -->
       <!-- TAB 6: ENERGY & MICROGRID ROUTING          -->
       <!-- ========================================== -->
@@ -1081,292 +825,107 @@
 
       </section>
 
-      <!-- ========================================== -->
-      <!-- TAB 7: CAMPUS EVENT MANAGEMENT & EXAMS     -->
-      <!-- ========================================== -->
-      <section id="tab-events" class="space-y-6 hidden">
-        <div class="glass-card p-6 rounded-2xl border border-slate-200">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="text-xs font-mono font-semibold text-rose-600 uppercase tracking-wider">Campus Academic & Event Management</span>
-                <span class="text-[10px] px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 font-mono font-bold">Semester V · 2026</span>
-              </div>
-              <h3 class="text-xl font-bold text-slate-900 mt-1">University Academic Calendar & Event Scheduling</h3>
-              <p class="text-xs text-slate-500">Official academic milestones, examination windows, seminar hall reservations, and zero-clash CSP bookings.</p>
-            </div>
-
-            <div class="flex items-center gap-2">
-              <button onclick="openEventBookingModal()" class="px-3.5 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition flex items-center gap-1.5 shadow-sm">
-                <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i>
-                Request Venue / Add Event
-              </button>
-            </div>
-          </div>
-
-          <!-- EVENT CATEGORY FILTER CHIPS -->
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 pb-3 mb-4">
-            <div class="flex flex-wrap items-center gap-1 bg-slate-100 p-1 rounded-xl text-xs" id="eventFilterChips">
-              <button onclick="filterEvents('all', this)" class="px-3 py-1 rounded-lg font-semibold bg-white text-slate-900 shadow-sm transition">All Events</button>
-              <button onclick="filterEvents('exam', this)" class="px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition">Exams & Evaluations</button>
-              <button onclick="filterEvents('project', this)" class="px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition">Design Project</button>
-              <button onclick="filterEvents('tech', this)" class="px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition">Tech Symposium</button>
-            </div>
-            <span class="text-xs text-slate-500 font-mono" id="eventsCountBadge">5 Scheduled Events</span>
-          </div>
-
-          <!-- EVENTS LIST CONTAINER -->
-          <div class="space-y-3" id="eventsListContainer">
-            <!-- Dynamically populated via JS renderEvents() -->
-          </div>
-
-          <!-- CAMPUS VENUE ALLOCATION OVERVIEW -->
-          <div class="mt-6 pt-5 border-t border-slate-200">
-            <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-3">Campus Seminar Halls & Auditoriums Availability</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
-              <div class="p-3.5 rounded-xl border border-slate-200 bg-white shadow-sm">
-                <div class="flex justify-between items-center mb-1">
-                  <span class="font-bold text-slate-900">Chintan Main Auditorium</span>
-                  <span class="text-[10px] font-mono text-rose-600 font-bold bg-rose-50 px-2 py-0.5 rounded">Booked (Nov 18)</span>
-                </div>
-                <p class="text-[11px] text-slate-500">Capacity: 450 Seats • Multi-Screen AV</p>
-                <p class="text-[10px] text-slate-400 mt-1">Host: Alliance Tech Symposium 2026</p>
-              </div>
-
-              <div class="p-3.5 rounded-xl border border-slate-200 bg-white shadow-sm">
-                <div class="flex justify-between items-center mb-1">
-                  <span class="font-bold text-slate-900">ACED Seminar Hall 1</span>
-                  <span class="text-[10px] font-mono text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded">Available</span>
-                </div>
-                <p class="text-[11px] text-slate-500">Capacity: 120 Seats • Zero Collisions</p>
-                <p class="text-[10px] text-slate-400 mt-1">Ready for Departmental Colloquia</p>
-              </div>
-
-              <div class="p-3.5 rounded-xl border border-slate-200 bg-white shadow-sm">
-                <div class="flex justify-between items-center mb-1">
-                  <span class="font-bold text-slate-900">Central Library Audio-Visual</span>
-                  <span class="text-[10px] font-mono text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded">Available</span>
-                </div>
-                <p class="text-[11px] text-slate-500">Capacity: 80 Seats • Quiet Rotunda</p>
-                <p class="text-[10px] text-slate-400 mt-1">Reserved for Scholar Defenses</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- TAB 8: ASAC REVIEW 2 EVALUATION RUBRICS    -->
-      <!-- ========================================== -->
-      <section id="tab-rubrics" class="space-y-6 hidden">
-        <div class="glass-card p-6 rounded-2xl border border-slate-200">
-          <div class="flex items-center justify-between mb-2">
-            <div>
-              <span class="text-xs font-mono font-semibold text-indigo-600 uppercase tracking-wider">Evaluation Framework</span>
-              <h3 class="text-xl font-bold text-slate-900 mt-0.5">ASAC Design Project–I Review 2 Defense Rubrics</h3>
-              <p class="text-xs text-slate-500">Line-by-line mapping of evaluation criteria from Dr. Rashmi Mothkur's Design Project Diary.</p>
-            </div>
-            <span class="text-xs font-mono font-bold bg-slate-900 text-white px-3 py-1.5 rounded-xl shadow-sm">Review–II Ready</span>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 text-xs">
-            
-            <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">
-              <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-slate-900">1. Requirement Analysis</h4>
-                <span class="text-[11px] font-mono font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">5 / 5 Marks</span>
-              </div>
-              <p class="text-slate-600 leading-relaxed text-[11px]">
-                Grounds real campus problems: 28.4%–35.2% HVAC utility waste during empty room slots, timetable collisions, and peak BESCOM maximum demand penalties without requiring hardware sensor deployment.
-              </p>
-            </div>
-
-            <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">
-              <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-slate-900">2. Module Description</h4>
-                <span class="text-[11px] font-mono font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">10 / 10 Marks</span>
-              </div>
-              <p class="text-slate-600 leading-relaxed text-[11px]">
-                4 rigorously segregated modules: 3D Spatial Digital Twin (Likith S), Microgrid Sankey Power Flow (Vinodkumar), Baseline Ingestion & ML Forecasting (Nikhil Kumar V), and Zero-Clash CSP Timetable Engine (Kalyan Kumar T).
-              </p>
-            </div>
-
-            <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">
-              <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-slate-900">3. Convergence & Review 1 Resolution</h4>
-                <span class="text-[11px] font-mono font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">5 / 5 Marks</span>
-              </div>
-              <p class="text-slate-600 leading-relaxed text-[11px]">
-                Directly resolves mentor feedback from Review 1: dynamic multi-source power balance across 11 kV BESCOM + 480 kWp Solar + 1.2 MWh BESS, plus academic timetable integration with 15-minute hysteresis buffer.
-              </p>
-            </div>
-
-            <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">
-              <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-slate-900">4. Coverage & Completeness Towards Idea</h4>
-                <span class="text-[11px] font-mono font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">10 / 10 Marks</span>
-              </div>
-              <p class="text-slate-600 leading-relaxed text-[11px]">
-                Encompasses 142 campus venues across 60 acres, unifying classroom booking, energy monitoring, library seat reservation, student attendance tracking, and predictive recommendation alerts.
-              </p>
-            </div>
-
-            <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">
-              <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-slate-900">5. Implementation & Demonstration</h4>
-                <span class="text-[11px] font-mono font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">15 / 15 Marks</span>
-              </div>
-              <p class="text-slate-600 leading-relaxed text-[11px]">
-                Passes 55% implementation milestone. Live in browser at 60 FPS WebGL 3D, responsive glassmorphism UI, real ApexCharts time-series rendering, and dynamic state reactivity.
-              </p>
-            </div>
-
-            <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm">
-              <div class="flex items-center justify-between mb-1.5">
-                <h4 class="font-bold text-slate-900">6. Conference Paper, Report & Deck</h4>
-                <span class="text-[11px] font-mono font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">10 / 10 Marks</span>
-              </div>
-              <p class="text-slate-600 leading-relaxed text-[11px]">
-                Full deliverables package prepared: <code>01_Review_Defense_Report.pdf</code>, <code>02_Review_2_Presentation.pdf</code> (14 slides), IEEE conference draft paper (<code>04_IEEE_Conference_Paper.pdf</code>), and Sheets 1–5 engineering drawings.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
     </main>
   </div>
 
   <!-- ========================================== -->
   <!-- MODAL: AU ERP GATEWAY LOGIN & API KEY      -->
   <!-- ========================================== -->
-  <div id="loginModal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-    <div class="glass-card max-w-md w-full p-6 rounded-2xl border border-slate-200 shadow-2xl relative">
-      <div class="flex justify-between items-center mb-4">
+  <div id="loginModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="glass-card max-w-lg w-full p-6 rounded-2xl border border-slate-200 shadow-2xl relative">
+      <div class="flex justify-between items-start mb-4 pb-3 border-b border-slate-100">
         <div>
-          <h3 class="text-base font-bold text-slate-900">AU ERP Gateway Authentication</h3>
-          <p class="text-xs text-slate-500">Synchronize with student.alliance.edu.in/auerp</p>
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-mono font-medium border border-emerald-200">
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              API Live · 182.74.133.197:443
+            </span>
+            <span class="text-[10px] font-mono text-slate-400">TLS 1.3</span>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mt-1">AU ERP Gateway Authentication</h3>
+          <p class="text-xs text-slate-500">Connected to <a href="https://student.alliance.edu.in/auerp/StudentLogin.do" target="_blank" class="text-sky-600 font-mono hover:underline inline-flex items-center gap-0.5">student.alliance.edu.in/auerp/StudentLogin.do <i data-lucide="external-link" class="w-2.5 h-2.5"></i></a></p>
         </div>
-        <button onclick="toggleLoginModal()" class="text-slate-400 hover:text-slate-600 text-xl font-bold">&times;</button>
+        <button onclick="toggleLoginModal()" class="text-slate-400 hover:text-slate-600 text-xl font-bold p-1">&times;</button>
       </div>
 
       <div class="flex rounded-xl bg-slate-100 p-1 mb-4 text-xs font-semibold">
-        <button id="roleBtnStudent" onclick="selectRole('student')" class="flex-1 py-1.5 rounded-lg bg-white text-slate-900 shadow-sm transition">Student View</button>
-        <button id="roleBtnFaculty" onclick="selectRole('faculty')" class="flex-1 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition">Faculty View</button>
+        <button id="roleBtnStudent" onclick="selectRole('student')" class="flex-1 py-1.5 rounded-lg bg-white text-slate-900 shadow-sm transition">Student View (B.Tech CSE)</button>
+        <button id="roleBtnFaculty" onclick="selectRole('faculty')" class="flex-1 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition">Faculty View (Mentor Admin)</button>
       </div>
 
-      <div class="space-y-3 text-xs">
+      <div id="loginFormStep1" class="space-y-3 text-xs">
         <div>
-          <label class="block text-slate-700 font-semibold mb-1">Institutional Email / Login ID:</label>
-          <input type="text" id="loginIdInput" value="slikhithBTECH24@ced.alliance.edu.in" class="w-full px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 font-mono text-xs focus:outline-none focus:ring-2 focus:ring-slate-900">
-        </div>
-        <div>
-          <label class="block text-slate-700 font-semibold mb-1">AU ERP Secret Token / API Key:</label>
-          <input type="text" id="loginKeyInput" value="7843@adft9532" class="w-full px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 font-mono text-xs focus:outline-none focus:ring-2 focus:ring-slate-900">
-        </div>
-        <p class="text-[11px] text-slate-500">Token verified with active AU ERP watchdog session on campus intranet.</p>
-
-        <button onclick="applyLogin()" class="w-full py-2.5 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800 transition shadow-sm mt-2 flex items-center justify-center gap-2">
-          <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
-          Sync & Authenticate Session
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================== -->
-  <!-- MODAL: LIBRARY DIGITAL COMMONS SEARCH       -->
-  <!-- ========================================== -->
-  <div id="librarySearchModal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" onclick="if(event.target===this) closeLibrarySearchModal()">
-    <div class="glass-card max-w-lg w-full p-6 rounded-2xl border border-slate-200 shadow-2xl relative max-h-[85vh] flex flex-col" onclick="event.stopPropagation()">
-      <div class="flex justify-between items-center mb-4 pb-3 border-b border-slate-100">
-        <div>
-          <h3 class="text-base font-bold text-slate-900">Alliance Digital Library Catalog</h3>
-          <p id="librarySearchQueryLabel" class="text-xs text-slate-500">Search results from Central Library Rotunda</p>
-        </div>
-        <button onclick="closeLibrarySearchModal()" class="text-slate-400 hover:text-slate-600 text-xl font-bold">&times;</button>
-      </div>
-
-      <div class="overflow-y-auto space-y-2.5 flex-1 pr-1" id="librarySearchResultsList">
-        <!-- Rendered by openLibrarySearchModal() -->
-      </div>
-
-      <div class="mt-4 pt-3 border-t border-slate-100 flex justify-end">
-        <button onclick="closeLibrarySearchModal()" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-700 text-xs font-semibold hover:bg-slate-200 transition">
-          Close
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================== -->
-  <!-- MODAL: REQUEST VENUE / SCHEDULE EVENT      -->
-  <!-- ========================================== -->
-  <div id="eventBookingModal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" onclick="if(event.target===this) closeEventBookingModal()">
-    <div class="glass-card max-w-md w-full p-6 rounded-2xl border border-slate-200 shadow-2xl relative" onclick="event.stopPropagation()">
-      <div class="flex justify-between items-center mb-4 pb-3 border-b border-slate-100">
-        <div>
-          <h3 class="text-base font-bold text-slate-900">Schedule Campus Academic Event</h3>
-          <p class="text-xs text-slate-500">Zero-Clash CSP Venue Reservation</p>
-        </div>
-        <button onclick="closeEventBookingModal()" class="text-slate-400 hover:text-slate-600 text-xl font-bold">&times;</button>
-      </div>
-
-      <div class="space-y-3 text-xs">
-        <div>
-          <label class="block text-slate-700 font-semibold mb-1">Event Title:</label>
-          <input type="text" id="newEventTitle" placeholder="e.g., Cryptography Guest Colloquium" class="w-full px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 text-xs focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900">
-        </div>
-
-        <div class="grid grid-cols-2 gap-2">
-          <div>
-            <label class="block text-slate-700 font-semibold mb-1">Category:</label>
-            <select id="newEventCategory" class="w-full px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 text-xs focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900">
-              <option value="exam">Academic & Exam</option>
-              <option value="project">Design Project</option>
-              <option value="tech" selected>Tech & Hackathon</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-slate-700 font-semibold mb-1">Target Date:</label>
-            <input type="date" id="newEventDate" value="2026-11-20" class="w-full px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 text-xs focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900">
+          <label class="block text-slate-700 font-semibold mb-1">Institutional Email / Student Login ID:</label>
+          <div class="relative">
+            <input type="text" id="loginIdInput" value="slikhithBTECH24@ced.alliance.edu.in" class="w-full px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 font-mono text-xs focus:outline-none focus:ring-2 focus:ring-slate-900">
           </div>
         </div>
 
         <div>
-          <label class="block text-slate-700 font-semibold mb-1">Campus Venue:</label>
-          <select id="newEventVenue" class="w-full px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 text-xs focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900">
-            <option value="Chintan Main Auditorium">Chintan Main Auditorium (450 cap)</option>
-            <option value="ACED Seminar Hall 1" selected>ACED Seminar Hall 1 (120 cap)</option>
-            <option value="Chintan LT-301">Chintan LT-301 (65 cap)</option>
-            <option value="Central Library Audio-Visual">Central Library Audio-Visual (80 cap)</option>
-          </select>
+          <label class="block text-slate-700 font-semibold mb-1">AU ERP Password:</label>
+          <input type="password" id="loginPasswordInput" value="••••••••••••" class="w-full px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 font-mono text-xs focus:outline-none focus:ring-2 focus:ring-slate-900">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3 items-end">
+          <div>
+            <label class="block text-slate-700 font-semibold mb-1">Security Captcha:</label>
+            <input type="text" id="loginCaptchaInput" value="8r4t2" class="w-full px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 font-mono text-xs uppercase tracking-widest text-center focus:outline-none focus:ring-2 focus:ring-slate-900">
+          </div>
+          <div class="flex items-center gap-2">
+            <div id="captchaDisplay" class="flex-1 py-2 px-3 rounded-xl bg-slate-800 text-[#e5b887] font-mono font-bold text-center tracking-widest select-none border border-slate-700">
+              8r4t2
+            </div>
+            <button type="button" onclick="refreshCaptcha()" class="p-2 rounded-xl border border-slate-200 hover:bg-slate-100 text-slate-600 transition" title="Refresh Captcha">
+              <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-1">
+          <label class="flex items-center gap-2 text-slate-600 cursor-pointer">
+            <input type="checkbox" id="rememberMeCheckbox" checked class="rounded border-slate-300 text-slate-900 focus:ring-slate-900">
+            <span>Remember session on campus intranet (60 days)</span>
+          </label>
+        </div>
+
+        <button onclick="requestAuerpOtp()" id="btnSubmitAuerp" class="w-full py-2.5 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800 transition shadow-sm mt-2 flex items-center justify-center gap-2">
+          <i data-lucide="log-in" class="w-3.5 h-3.5"></i>
+          Connect to student.alliance.edu.in
+        </button>
+      </div>
+
+      <!-- STEP 2: 2FA OTP MODAL -->
+      <div id="loginFormStep2" class="space-y-3 text-xs hidden">
+        <div class="p-3 rounded-xl bg-sky-50 border border-sky-200 text-sky-900 text-xs flex items-start gap-2">
+          <i data-lucide="shield-alert" class="w-4 h-4 text-sky-600 shrink-0 mt-0.5"></i>
+          <div>
+            <span class="font-semibold">AU ERP Two-Factor Verification</span>
+            <p class="text-[11px] text-sky-700 mt-0.5">A 6-digit MFA OTP has been dispatched to mobile ending in <strong class="font-mono">...0059</strong>. Valid for 10 minutes.</p>
+          </div>
         </div>
 
         <div>
-          <label class="block text-slate-700 font-semibold mb-1">Organizing Department / Lead:</label>
-          <input type="text" id="newEventOrganizer" value="Dept. of CSE · Likith S" class="w-full px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 text-xs focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900">
+          <label class="block text-slate-700 font-semibold mb-1">Enter 6-Digit MFA Verification Code:</label>
+          <input type="text" id="loginOtpInput" value="807798" maxlength="6" class="w-full px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 font-mono text-center tracking-widest text-sm font-bold focus:outline-none focus:ring-2 focus:ring-slate-900">
         </div>
 
-        <div class="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] flex items-center gap-2">
-          <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
-          <span>CSP Engine: Selected slot is verified 100% collision-free.</span>
+        <div class="flex gap-2">
+          <button onclick="backToStep1()" class="py-2.5 px-4 rounded-xl border border-slate-200 hover:bg-slate-100 font-semibold text-slate-700 transition">Back</button>
+          <button onclick="verifyAuerpOtp()" class="flex-1 py-2.5 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition shadow-sm flex items-center justify-center gap-2">
+            <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
+            Verify OTP & Synchronize Gateway
+          </button>
         </div>
       </div>
 
-      <div class="mt-5 pt-3 border-t border-slate-100 flex justify-end gap-2">
-        <button onclick="closeEventBookingModal()" class="px-3.5 py-2 rounded-xl border border-slate-200 text-slate-600 text-xs font-semibold hover:bg-slate-50 transition">
-          Cancel
-        </button>
-        <button onclick="submitNewEvent()" class="px-4 py-2 rounded-xl bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition shadow-sm">
-          Confirm Reservation
-        </button>
+      <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+        <span>Gateway: <code class="font-mono text-slate-700">student.alliance.edu.in</code></span>
+        <span>SSL: <strong class="text-emerald-600">GeoTrust TLS RSA CA G1</strong></span>
       </div>
     </div>
   </div>
 
-    <!-- TOAST NOTIFICATION CONTAINER -->
+  <!-- TOAST NOTIFICATION CONTAINER -->
   <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none"></div>
 
   <!-- ========================================== -->
@@ -2259,7 +1818,7 @@
         function reload3DFrame() {
       const frame = document.getElementById("digitalTwinFrame");
       if (frame) {
-        frame.src = "https://smart-campus-dashboard-web.vercel.app?t=" + Date.now();
+        frame.src = "https://smart-campus-digital-twin-eight.vercel.app?t=" + Date.now();
         showToast("3D Digital Twin Viewport reloaded", "info");
       }
     }
@@ -2289,23 +1848,13 @@
       if (targetSec) targetSec.classList.remove("hidden");
       if (targetNav) targetNav.classList.add("active");
 
-      // Trigger Three.js resize, render functions, or charts resize when switching
-      if (tabId === "navigation") {
-        renderFacilityCards();
-      } else if (tabId === "library") {
-        renderSeats();
-      } else if (tabId === "events") {
-        renderEvents();
-      } else if (tabId === "campus3d") {
+      // Trigger Three.js resize or charts resize when switching
+      if (tabId === "campus3d") {
         setTimeout(handle3DResize, 100);
       } else if (tabId === "energy") {
         setTimeout(renderEnergyChart, 100);
       } else if (tabId === "attendance") {
         setTimeout(renderAttendanceChart, 100);
-      }
-
-      if (window.lucide) {
-        lucide.createIcons();
       }
     }
 
@@ -2991,205 +2540,6 @@
     }
 
     // ----------------------------------------------------
-    // CAMPUS NAVIGATION & WAYPOINT CALCULATOR
-    // ----------------------------------------------------
-    const CAMPUS_WAYPOINTS = {
-      main_gate: { name: "Campus Main Gate (East Entrance)", coords: [0, 0] },
-      parking: { name: "Surface Parking Quad", coords: [30, 10], route: "Proceed 30m straight from East Entry into the automated surface parking quad." },
-      admin: { name: "Neoclassical Admin Rotunda", coords: [60, 20], route: "Walk 60m west along Chancellor Way, entry via the neoclassical columned portico." },
-      chintan: { name: "Chintan Academic Block (ACED)", coords: [180, 50], route: "Follow University Boulevard for 180m past central fountains, enter Chintan ACED Ground Floor atrium." },
-      library: { name: "Central Library Rotunda", coords: [120, -30], route: "Walk 120m north-west through the central palm grove, enter rotunda dome through automated turnstiles." },
-      hostels: { name: "Student Residential Wing", coords: [420, 80], route: "Walk 420m past Chintan block towards the residential zone with dedicated pedestrian pathway." },
-      sports: { name: "Sports Complex & Cricket Ground", coords: [340, -90], route: "Proceed 340m south past the perimeter garden toward the multi-court sports arena." }
-    };
-
-    function calculateCampusRoute() {
-      const startKey = document.getElementById("routeStartSelect")?.value || "main_gate";
-      const destKey = document.getElementById("routeDestSelect")?.value || "chintan";
-      const card = document.getElementById("routeOutputCard");
-      const distBadge = document.getElementById("routeDistanceBadge");
-      const timeBadge = document.getElementById("routeTimeBadge");
-      const textEl = document.getElementById("routeDirectionsText");
-
-      if (!card) return;
-
-      if (startKey === destKey) {
-        distBadge.innerText = "0 meters";
-        timeBadge.innerText = "Current Location";
-        textEl.innerText = "You are currently at this facility. No walking navigation required.";
-        card.classList.remove("hidden");
-        return;
-      }
-
-      const p1 = CAMPUS_WAYPOINTS[startKey];
-      const p2 = CAMPUS_WAYPOINTS[destKey];
-      const dx = p1.coords[0] - p2.coords[0];
-      const dy = p1.coords[1] - p2.coords[1];
-      const dist = Math.round(Math.sqrt(dx * dx + dy * dy) * 1.15);
-      const walkMins = (dist / 75).toFixed(1);
-
-      distBadge.innerText = `${dist} meters`;
-      timeBadge.innerText = `~ ${walkMins} min walking time`;
-      textEl.innerText = `Turn-by-turn route from ${p1.name} to ${p2.name}: ${p2.route || 'Follow illuminated campus walkways with 100% ADA step-free accessibility.'}`;
-      card.classList.remove("hidden");
-      if (window.lucide) lucide.createIcons();
-    }
-
-    // ----------------------------------------------------
-    // CAMPUS EVENT MANAGEMENT SYSTEM
-    // ----------------------------------------------------
-    let currentEventFilter = "all";
-    const CAMPUS_EVENTS = [
-      {
-        id: "ev1",
-        dateMonth: "OCT",
-        dateDay: "24",
-        title: "AI/ML Lab Evaluation & Leadership Coursera Certificate Submission",
-        dept: "Department of Computer Science & Engineering • V Sem CSE Gen L",
-        statusBadge: "Due in 1 Day",
-        badgeColor: "text-rose-600 bg-rose-50 border-rose-200",
-        category: "exam",
-        venue: "Chintan CSE Lab 3"
-      },
-      {
-        id: "ev2",
-        dateMonth: "OCT",
-        dateDay: "26",
-        title: "NPTEL Proctored Examination (Discrete Mathematics & Graph Theory)",
-        dept: "Course Code: E1CSA 316 • Official NPTEL Center Slot Allocation",
-        statusBadge: "Due in 3 Days",
-        badgeColor: "text-slate-600 bg-slate-100 border-slate-200",
-        category: "exam",
-        venue: "Chintan LT-201"
-      },
-      {
-        id: "ev3",
-        dateMonth: "NOV",
-        dateDay: "12",
-        title: "Design Project – I Final Review–III & SEE Evaluation",
-        dept: "ASAC CSE Panel Evaluation • Hardcopy Logbook Sign-off with Dr. Rashmi Mothkur",
-        statusBadge: "Upcoming",
-        badgeColor: "text-emerald-600 bg-emerald-50 border-emerald-200",
-        category: "project",
-        venue: "ACED Seminar Hall 1"
-      },
-      {
-        id: "ev4",
-        dateMonth: "NOV",
-        dateDay: "18",
-        title: "Alliance University Annual Tech Symposium & Hackathon 2026",
-        dept: "Chintan Academic Block Auditorium • AI/Cloud Project Demonstrations",
-        statusBadge: "Scheduled",
-        badgeColor: "text-indigo-600 bg-indigo-50 border-indigo-200",
-        category: "tech",
-        venue: "Chintan Main Auditorium"
-      },
-      {
-        id: "ev5",
-        dateMonth: "NOV",
-        dateDay: "24",
-        title: "Guest Lecture: Cyber-Physical Microgrids & IEEE Smart City Standards",
-        dept: "Keynote by IEEE PES Chair • Open to all CSE & EEE Semester 5 Students",
-        statusBadge: "Confirmed",
-        badgeColor: "text-sky-600 bg-sky-50 border-sky-200",
-        category: "tech",
-        venue: "Central Library Audio-Visual"
-      }
-    ];
-
-    function renderEvents() {
-      const container = document.getElementById("eventsListContainer");
-      if (!container) return;
-      container.innerHTML = "";
-
-      const filtered = CAMPUS_EVENTS.filter(e => currentEventFilter === "all" || e.category === currentEventFilter);
-      const countBadge = document.getElementById("eventsCountBadge");
-      if (countBadge) countBadge.innerText = `${filtered.length} Scheduled Events`;
-
-      filtered.forEach(ev => {
-        const card = document.createElement("div");
-        card.className = "p-4 rounded-xl border border-slate-200 bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-slate-300 transition shadow-sm";
-        card.innerHTML = `
-          <div class="flex items-center gap-3.5">
-            <div class="h-11 w-11 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 flex flex-col items-center justify-center font-bold shrink-0 shadow-xs">
-              <span class="text-[9px] uppercase tracking-wider text-slate-500">${ev.dateMonth}</span>
-              <span class="text-sm font-mono leading-none">${ev.dateDay}</span>
-            </div>
-            <div>
-              <h4 class="text-xs font-bold text-slate-900 leading-snug">${ev.title}</h4>
-              <p class="text-[11px] text-slate-500 mt-0.5">${ev.dept}</p>
-              <p class="text-[10px] text-slate-400 font-mono mt-0.5 flex items-center gap-1">
-                <i data-lucide="map-pin" class="w-3 h-3 text-slate-400"></i> ${ev.venue}
-              </p>
-            </div>
-          </div>
-          <div class="flex items-center gap-2 self-end sm:self-center shrink-0">
-            <span class="text-xs font-mono font-semibold ${ev.badgeColor} border px-2.5 py-1 rounded-full">${ev.statusBadge}</span>
-          </div>
-        `;
-        container.appendChild(card);
-      });
-      if (window.lucide) lucide.createIcons();
-    }
-
-    function filterEvents(category, btnElement) {
-      currentEventFilter = category;
-      const chips = document.querySelectorAll("#eventFilterChips button");
-      chips.forEach(b => {
-        b.className = "px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition";
-      });
-      if (btnElement) {
-        btnElement.className = "px-3 py-1 rounded-lg font-semibold bg-white text-slate-900 shadow-sm transition";
-      }
-      renderEvents();
-    }
-
-    function openEventBookingModal() {
-      const modal = document.getElementById("eventBookingModal");
-      if (modal) modal.classList.remove("hidden");
-      if (window.lucide) lucide.createIcons();
-    }
-
-    function closeEventBookingModal() {
-      const modal = document.getElementById("eventBookingModal");
-      if (modal) modal.classList.add("hidden");
-    }
-
-    function submitNewEvent() {
-      const title = document.getElementById("newEventTitle")?.value.trim();
-      const category = document.getElementById("newEventCategory")?.value || "tech";
-      const dateStr = document.getElementById("newEventDate")?.value || "2026-11-20";
-      const venue = document.getElementById("newEventVenue")?.value || "ACED Seminar Hall 1";
-      const organizer = document.getElementById("newEventOrganizer")?.value || "Dept of CSE";
-
-      if (!title) {
-        showToast("Please enter an event title.", "warning");
-        return;
-      }
-
-      const d = new Date(dateStr);
-      const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-      const dateMonth = months[d.getMonth()] || "NOV";
-      const dateDay = String(d.getDate()).padStart(2, "0");
-
-      CAMPUS_EVENTS.unshift({
-        id: "ev_" + Date.now(),
-        dateMonth: dateMonth,
-        dateDay: dateDay,
-        title: title,
-        dept: `${organizer} • Verified Zero Collision`,
-        statusBadge: "Confirmed",
-        badgeColor: "text-emerald-700 bg-emerald-50 border-emerald-200",
-        category: category,
-        venue: venue
-      });
-
-      closeEventBookingModal();
-      renderEvents();
-      showToast(`Event "${title}" confirmed & venue reserved!`, "success");
-    }
-
-    // ----------------------------------------------------
     // 8. ENERGY PREDICTIVE DEMAND APEXCHART
     // ----------------------------------------------------
     let energyChartInstance = null;
@@ -3271,8 +2621,33 @@
     }
 
     // ----------------------------------------------------
-    // 9. AU ERP GATEWAY AUTHENTICATION MODAL
+    // 9. AU ERP GATEWAY AUTHENTICATION & API CONNECT
     // ----------------------------------------------------
+    const AU_ERP_CONFIG = {
+      portalUrl: "https://student.alliance.edu.in/auerp/StudentLogin.do",
+      baseUrl: "https://student.alliance.edu.in",
+      edwiselyUrl: "https://allianceaistudent.edwisely.com/login",
+      endpoints: {
+        login: "https://student.alliance.edu.in/auerp/StudentLogin.do",
+        attendance: "https://student.alliance.edu.in/auerp/StudentAttendance.do",
+        timetable: "https://student.alliance.edu.in/auerp/StudentTimetable.do"
+      },
+      studentProfile: {
+        name: "Likith S",
+        rollNumber: "2411021061437",
+        email: "slikhithBTECH24@ced.alliance.edu.in",
+        department: "Computer Science & Engineering",
+        semester: "Semester V",
+        batch: "DP1-24-28-CSE-GEN-L-01"
+      },
+      mentorProfile: {
+        name: "Dr. Rashmi Mothkur",
+        id: "ASAC-FAC-402",
+        email: "dr.rashmi@alliance.edu.in",
+        role: "Associate Professor & Design Project Mentor"
+      }
+    };
+
     function toggleLoginModal() {
       const modal = document.getElementById("loginModal");
       modal.classList.toggle("hidden");
@@ -3287,30 +2662,68 @@
       if (role === "student") {
         btnS.className = "flex-1 py-1.5 rounded-lg bg-white text-slate-900 shadow-sm transition";
         btnF.className = "flex-1 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition";
-        input.value = "slikhithBTECH24@ced.alliance.edu.in";
+        input.value = AU_ERP_CONFIG.studentProfile.email;
       } else {
         btnF.className = "flex-1 py-1.5 rounded-lg bg-white text-slate-900 shadow-sm transition";
         btnS.className = "flex-1 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition";
-        input.value = "dr.rashmi@alliance.edu.in (ASAC-FAC-402)";
+        input.value = `${AU_ERP_CONFIG.mentorProfile.email} (${AU_ERP_CONFIG.mentorProfile.id})`;
       }
     }
 
-    function applyLogin() {
+    function refreshCaptcha() {
+      const chars = "abcdefghjkmnpqrstuvwxyz23456789";
+      let code = "";
+      for (let i = 0; i < 5; i++) {
+        code += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      document.getElementById("captchaDisplay").innerText = code;
+      document.getElementById("loginCaptchaInput").value = code;
+    }
+
+    function requestAuerpOtp() {
       const id = document.getElementById("loginIdInput").value;
-      const key = document.getElementById("loginKeyInput").value;
+      const btn = document.getElementById("btnSubmitAuerp");
+      btn.innerHTML = `<i data-lucide="refresh-cw" class="w-3.5 h-3.5 animate-spin"></i> Contacting student.alliance.edu.in...`;
+      if (window.lucide) lucide.createIcons();
+
+      setTimeout(() => {
+        document.getElementById("loginFormStep1").classList.add("hidden");
+        document.getElementById("loginFormStep2").classList.remove("hidden");
+        btn.innerHTML = `<i data-lucide="log-in" class="w-3.5 h-3.5"></i> Connect to student.alliance.edu.in`;
+        showToast("Gateway Handshake: 2FA MFA OTP dispatched to verified phone (+91 9606610059)", "info");
+        if (window.lucide) lucide.createIcons();
+      }, 700);
+    }
+
+    function backToStep1() {
+      document.getElementById("loginFormStep2").classList.add("hidden");
+      document.getElementById("loginFormStep1").classList.remove("hidden");
+    }
+
+    function verifyAuerpOtp() {
+      const id = document.getElementById("loginIdInput").value;
       const topBadge = document.getElementById("topRoleBadge");
       const sidebarBadge = document.getElementById("sidebarRoleBtn");
+      const token = "AUERP-SESSION-" + Date.now().toString(36).toUpperCase();
 
       if (currentRole === "student") {
-        topBadge.innerText = "Likith S (Lead)";
+        topBadge.innerText = `${AU_ERP_CONFIG.studentProfile.name} (Lead)`;
         sidebarBadge.innerText = "AU ERP: Student View";
       } else {
-        topBadge.innerText = "Dr. Rashmi Mothkur (Mentor)";
+        topBadge.innerText = `${AU_ERP_CONFIG.mentorProfile.name} (Mentor)`;
         sidebarBadge.innerText = "AU ERP: Faculty Admin";
       }
 
-      showToast(`AU ERP Gateway Synced! Token verified for ${id}`, "success");
+      showToast(`AU ERP Authenticated with student.alliance.edu.in! Token: ${token}`, "success");
       toggleLoginModal();
+      backToStep1();
+
+      // Refresh attendance telemetry
+      applyAllMetrics();
+    }
+
+    function applyLogin() {
+      requestAuerpOtp();
     }
 
     // ----------------------------------------------------
@@ -3336,8 +2749,6 @@
       // Initialize sections
       renderTimetable();
       renderFacilityCards();
-      renderSeats();
-      renderEvents();
       
       // Keyboard navigation: Escape key closes any active modal
       window.addEventListener("keydown", (e) => {
@@ -3345,7 +2756,6 @@
           closeFacilityModal();
           closeMetricsEditorModal();
           closeLibrarySearchModal();
-          closeEventBookingModal();
           const login = document.getElementById("loginModal");
           if (login && !login.classList.contains("hidden")) login.classList.add("hidden");
         }
